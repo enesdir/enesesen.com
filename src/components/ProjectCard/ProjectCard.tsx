@@ -1,0 +1,80 @@
+import { Box, Text, Flex, Icon, IconButton, useColorMode, Tag, HStack } from '@chakra-ui/react'
+import React, { useCallback } from 'react'
+import { IoLogoGithub, IoMdOpen } from 'react-icons/io'
+import { MdFolderOpen } from 'react-icons/md'
+
+import { IProject } from '@interfaces/githubProject'
+
+interface Props {
+  project: IProject
+}
+
+const ProjectCard: React.FC<Props> = ({ project }) => {
+  const { colorMode } = useColorMode()
+  const cardBgColor = { light: 'white', dark: 'gray.900' }
+  const cardColor = { light: 'gray.900', dark: 'white' }
+  const openLinkInNewTab = useCallback((url: string) => {
+    window.open(url, '_blank')
+  }, [])
+  const technologiesNode = () => (
+    <HStack spacing={4}>
+      {project.technologies.map((technology: string, index: number) => (
+        <Tag key={String(index)}>{technology}</Tag>
+      ))}
+    </HStack>
+  )
+
+  return (
+    <Box
+      bg={cardBgColor[colorMode]}
+      color={cardColor[colorMode]}
+      borderRadius="md"
+      px={5}
+      pt={5}
+      pb="60px"
+      position="relative"
+    >
+      <Flex justifyContent="space-between">
+        <Icon color="green.custom" as={MdFolderOpen} boxSize={8} />
+        <Box>
+          <IconButton
+            variant="link"
+            _hover={{
+              color: 'green.custom',
+            }}
+            _focus={{
+              borderColor: 'transparent',
+            }}
+            aria-label="Open github link"
+            icon={<IoLogoGithub size={30} />}
+            onClick={() => openLinkInNewTab(project.url)}
+          />
+          <IconButton
+            variant="link"
+            _hover={{
+              color: 'green.custom',
+            }}
+            _focus={{
+              borderColor: 'transparent',
+            }}
+            aria-label="Open website"
+            icon={<IoMdOpen size={30} />}
+            onClick={() => openLinkInNewTab(project.demoUrl)}
+          />
+        </Box>
+      </Flex>
+      <Text color="slate.lighter" fontSize="xl" fontWeight="bold" mt={4}>
+        {project.title}
+      </Text>
+      <Text fontWeight="medium" mt={3}>
+        {project.description}
+      </Text>
+      <Flex alignItems="center" position="absolute" mt={3} bottom={5}>
+        <Text fontWeight="medium">{project.name}</Text>
+        {technologiesNode()}
+      </Flex>
+    </Box>
+  )
+}
+
+export default ProjectCard

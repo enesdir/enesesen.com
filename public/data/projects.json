@@ -1,0 +1,23 @@
+[
+  {
+    "title": "CN-Blog",
+    "description": "Example Serverless Blog App written with NextJS",
+    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL"],
+    "url": "https://github.com/codenuru/cn-blog",
+    "demoUrl": "https://cn-blog-three.vercel.app"
+  },
+  {
+    "title": "CN-MovieDB",
+    "description": "Fetch External API Show React and Material-UI",
+    "technologies": ["TypeScript",  "React"],
+    "url": "https://github.com/codenuru/cn-moviedb",
+    "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app"
+  },
+   {
+    "title": "To-do App",
+    "description": "Todo Application with Svelte/Sapper",
+    "technologies": ["TypeScript", "Svelte", "Sapper"],
+    "url": "https://github.com/codenuru/svelte-todo",
+    "demoUrl": "https://sveltesapper-todo.netlify.app"
+  }
+]
