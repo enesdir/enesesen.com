@@ -10,7 +10,7 @@ interface PageSeoProps extends TRenderProps {
   type?: 'article' | 'website'
 }
 
-function PageSeo({ title, description, type, image, url, children }: PageSeoProps): JSX.Element {
+export function PageSeo({ title, description, type, image, url, children }: PageSeoProps): JSX.Element {
   return (
     <Head>
       <title>{title}</title>
@@ -35,4 +35,3 @@ function PageSeo({ title, description, type, image, url, children }: PageSeoProp
     </Head>
   )
 }
-export default PageSeo

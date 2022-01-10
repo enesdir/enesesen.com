@@ -2,13 +2,13 @@ import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
-import PageContent from '@components/PageContent'
+import { PageContent } from '@components/PageContent'
 import { ThemeProvider } from '@contexts/ThemeProvider'
-import Layout from '@layout'
+import { Layout } from '@layout'
 
 import '@styles/global.css'
 
-const App = ({ Component, pageProps }: AppProps) => {
+function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
@@ -19,20 +19,18 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <>
-      <ThemeProvider>
-        <Layout>
-          <Layout.Header />
-          <Layout.Content>
-            <PageContent isLoading={isLoading}>
-              <Component {...pageProps} />
-              <Layout.Footer />
-            </PageContent>
-          </Layout.Content>
-          <Layout.MobileDrawer />
-        </Layout>
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <Layout>
+        <Layout.Header />
+        <Layout.Content>
+          <PageContent isLoading={isLoading}>
+            <Component {...pageProps} />
+            <Layout.Footer />
+          </PageContent>
+        </Layout.Content>
+        <Layout.MobileDrawer />
+      </Layout>
+    </ThemeProvider>
   )
 }
 

@@ -1,1 +1,1 @@
-export { default } from './TechStackSection'
+export { TechStackSection } from './TechStackSection'

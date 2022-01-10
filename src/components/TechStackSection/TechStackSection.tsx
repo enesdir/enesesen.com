@@ -1,6 +1,6 @@
 import { Flex, Heading } from '@chakra-ui/react'
 
-import TechStackIcon from '@components/TechStackIcon'
+import { TechStackIcon } from '@components/TechStackIcon'
 import { TechStackIconType } from '@interfaces/techStackIconItem'
 import { TRenderProps } from '@typings/commonPropTypes'
 
@@ -8,7 +8,7 @@ interface TechStackSectionProps extends TRenderProps {
   title: string
   stackitems: TechStackIconType[]
 }
-function TechStackSection({ title, stackitems }: TechStackSectionProps): JSX.Element {
+export function TechStackSection({ title, stackitems }: TechStackSectionProps): JSX.Element {
   return (
     <Flex as="section" flexDir={['column', 'row']} py={['8px', '24px']}>
       <Heading
@@ -30,4 +30,3 @@ function TechStackSection({ title, stackitems }: TechStackSectionProps): JSX.Ele
     </Flex>
   )
 }
-export default TechStackSection

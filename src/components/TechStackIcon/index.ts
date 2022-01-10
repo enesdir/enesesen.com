@@ -1,1 +1,1 @@
-export { default } from './TechStackIcon'
+export { TechStackIcon } from './TechStackIcon'

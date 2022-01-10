@@ -6,6 +6,10 @@ const routes: routesType[] = [
     href: '/',
   },
   {
+    text: 'Portfolio',
+    href: '/portfolio',
+  },
+  {
     text: 'Projects',
     href: '/projects',
   },

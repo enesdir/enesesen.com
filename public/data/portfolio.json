@@ -4,20 +4,31 @@
     "description": "Example Serverless Blog App written with NextJS",
     "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL"],
     "url": "https://github.com/codenuru/cn-blog",
-    "demoUrl": "https://cn-blog-three.vercel.app"
+    "demoUrl": "https://cn-blog-three.vercel.app",
+    "imageUrl": "/portfolio/cn-blog.png"
+  },
+  {
+    "title": "CN-Market",
+    "description": "Example Landing Page/Store Page Auth with Firebase",
+    "technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
+    "url": "https://github.com/codenuru/cn-market",
+    "demoUrl": "https://cn-market.vercel.app",
+    "imageUrl": "/portfolio/cn-market.gif"
   },
   {
     "title": "CN-MovieDB",
     "description": "Fetch External API Show React and Material-UI",
     "technologies": ["TypeScript",  "React"],
     "url": "https://github.com/codenuru/cn-moviedb",
-    "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app"
+    "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app",
+    "imageUrl": ""
   },
    {
     "title": "To-do App",
     "description": "Todo Application with Svelte/Sapper",
     "technologies": ["TypeScript", "Svelte", "Sapper"],
     "url": "https://github.com/codenuru/svelte-todo",
-    "demoUrl": "https://sveltesapper-todo.netlify.app"
+    "demoUrl": "https://sveltesapper-todo.netlify.app",
+    "imageUrl": ""
   }
 ]

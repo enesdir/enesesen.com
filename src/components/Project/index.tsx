@@ -1,4 +1,4 @@
-import PageSeo from '@components/PageSeo'
+import { PageSeo } from '@components/PageSeo'
 import { HEAD_TITLE } from '@constants/seo'
 import { TRenderProps } from '@typings/commonPropTypes'
 
@@ -8,7 +8,6 @@ export function Project({ children }: TRenderProps) {
   return (
     <>
       <PageSeo title={`${HEAD_TITLE} | Projects`} description="Projects that i made" url="https://enesesen.com" />
-
       {children}
     </>
   )

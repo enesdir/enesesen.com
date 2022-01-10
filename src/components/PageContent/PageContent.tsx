@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import { Flex, Spinner } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 
@@ -7,7 +8,7 @@ interface PageContentProps extends TRenderProps {
   isLoading: boolean
 }
 
-function PageContent({ children, isLoading }: PageContentProps): JSX.Element {
+export function PageContent({ children, isLoading }: PageContentProps): JSX.Element {
   const [renderAfterDelay, setRenderAfterDelay] = useState(true)
 
   useEffect(() => {
@@ -36,4 +37,3 @@ function PageContent({ children, isLoading }: PageContentProps): JSX.Element {
     </>
   )
 }
-export default PageContent

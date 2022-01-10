@@ -1,11 +1,9 @@
-import { Button, Link, useColorModeValue } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
 import { NextButtonLink } from '@components/NextButtonLink'
 import { navButtonType } from '@interfaces/navButton'
 
-function NavButton({ text, href }: navButtonType): JSX.Element {
-  const color = useColorModeValue('primary.light', 'primary.dark')
+export function NavButton({ text, href }: navButtonType): JSX.Element {
   const { asPath } = useRouter()
   const isLast = asPath === href
 
@@ -24,4 +22,3 @@ function NavButton({ text, href }: navButtonType): JSX.Element {
     </NextButtonLink>
   )
 }
-export default NavButton

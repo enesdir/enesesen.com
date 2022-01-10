@@ -1,15 +1,16 @@
 import { Box, Text, Flex, Icon, IconButton, useColorMode, Tag, HStack } from '@chakra-ui/react'
+import Image from 'next/image'
 import React, { useCallback } from 'react'
 import { IoLogoGithub, IoMdOpen } from 'react-icons/io'
 import { MdFolderOpen } from 'react-icons/md'
 
-import { IProject } from '@interfaces/githubProject'
+import { IPortfolio } from '@interfaces/githubProject'
 
-interface Props {
-  project: IProject
+type Props = {
+  portfolio: IPortfolio
 }
 
-const ProjectCard: React.FC<Props> = ({ project }) => {
+export function PortfolioCard({ portfolio }: Props) {
   const { colorMode } = useColorMode()
   const cardBgColor = { light: 'white', dark: 'gray.900' }
   const cardColor = { light: 'gray.900', dark: 'white' }
@@ -18,7 +19,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   }, [])
   const technologiesNode = () => (
     <HStack spacing={4}>
-      {project.technologies.map((technology: string, index: number) => (
+      {portfolio.technologies.map((technology: string, index: number) => (
         <Tag key={String(index)}>{technology}</Tag>
       ))}
     </HStack>
@@ -35,7 +36,10 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       position="relative"
     >
       <Flex justifyContent="space-between">
-        <Icon color="green.custom" as={MdFolderOpen} boxSize={8} />
+        <Icon color="green.custom" as={MdFolderOpen} boxSize={8} />{' '}
+        <Text color="slate.lighter" fontSize="xl" fontWeight="bold" mt={0}>
+          {portfolio.title}
+        </Text>
         <Box>
           <IconButton
             variant="link"
@@ -47,7 +51,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             }}
             aria-label="Open github link"
             icon={<IoLogoGithub size={30} />}
-            onClick={() => openLinkInNewTab(project.url)}
+            onClick={() => openLinkInNewTab(portfolio.url)}
           />
           <IconButton
             variant="link"
@@ -59,22 +63,21 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             }}
             aria-label="Open website"
             icon={<IoMdOpen size={30} />}
-            onClick={() => openLinkInNewTab(project.demoUrl)}
+            onClick={() => openLinkInNewTab(portfolio.demoUrl)}
           />
         </Box>
       </Flex>
-      <Text color="slate.lighter" fontSize="xl" fontWeight="bold" mt={4}>
-        {project.title}
-      </Text>
+
+      {portfolio.imageUrl && (
+        <Image src={portfolio.imageUrl} alt="pixel" width="400em" height="500em" layout="responsive" />
+      )}
       <Text fontWeight="medium" mt={3}>
-        {project.description}
+        {portfolio.description}
       </Text>
       <Flex alignItems="center" position="absolute" mt={3} bottom={5}>
-        <Text fontWeight="medium">{project.name}</Text>
+        <Text fontWeight="medium">{portfolio.name}</Text>
         {technologiesNode()}
       </Flex>
     </Box>
   )
 }
-
-export default ProjectCard

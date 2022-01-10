@@ -5,7 +5,7 @@ import { TRenderProps } from '@typings/commonPropTypes'
 interface PageTitleProps extends TRenderProps {
   title: string
 }
-function PageTitle({ title, children }: PageTitleProps): JSX.Element {
+export function PageTitle({ title, children }: PageTitleProps): JSX.Element {
   return (
     <Flex justify="space-between" py="8px" borderBottomWidth="2px">
       <Heading size="lg" fontWeight="normal">
@@ -15,4 +15,3 @@ function PageTitle({ title, children }: PageTitleProps): JSX.Element {
     </Flex>
   )
 }
-export default PageTitle

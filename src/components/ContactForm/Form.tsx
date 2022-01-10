@@ -3,7 +3,7 @@ import { FaUserAlt, FaAt } from 'react-icons/fa'
 
 import { useContactForm } from '@hooks/useContactForm'
 
-function Form() {
+export function Form() {
   const { onSubmit, onInputChange, isSubmitting, errorMessage } = useContactForm()
   const color = useColorModeValue('primary.light', 'primary.dark')
 
@@ -43,5 +43,3 @@ function Form() {
     </Box>
   )
 }
-
-export default Form

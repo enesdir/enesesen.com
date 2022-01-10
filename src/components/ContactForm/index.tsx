@@ -1,10 +1,9 @@
-import Container from '@components/Container'
-import PageSeo from '@components/PageSeo'
+import { PageSeo } from '@components/PageSeo'
 import { HEAD_TITLE } from '@constants/seo'
 import { TRenderProps } from '@typings/commonPropTypes'
 
-import Form from './Form'
-import OtherContactMethods from './Other'
+import { Form } from './Form'
+import { OtherContactMethods } from './Other'
 
 function Contact({ children }: TRenderProps): JSX.Element {
   return (

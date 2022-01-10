@@ -1,9 +1,10 @@
-export interface IProject {
+export type IPortfolio = {
   title: string
   name: string
   description: string
   url: string
   demoUrl: string
+  imageUrl: string
   technologies: string[]
   homepageUrl: string
   forkCount: number

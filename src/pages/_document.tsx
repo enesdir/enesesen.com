@@ -4,9 +4,8 @@ import type { DocumentContext } from 'next/document'
 import * as React from 'react'
 
 export default class Document extends NextDocument {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await NextDocument.getInitialProps(ctx)
-    return { ...initialProps }
+  static getInitialProps(ctx: DocumentContext) {
+    return NextDocument.getInitialProps(ctx)
   }
 
   render() {

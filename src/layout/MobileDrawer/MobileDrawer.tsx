@@ -20,7 +20,7 @@ import routes from '@constants/routes'
 import { HEAD_TITLE } from '@constants/seo'
 import socialAccounts from '@constants/socialAccounts'
 
-function MobileDrawer(): JSX.Element {
+export function MobileDrawer(): JSX.Element {
   const { isOpen, onClose, onToggle } = useDisclosure()
   const btnRef = React.useRef()
 
@@ -87,5 +87,3 @@ function MobileDrawer(): JSX.Element {
     </>
   )
 }
-
-export default MobileDrawer

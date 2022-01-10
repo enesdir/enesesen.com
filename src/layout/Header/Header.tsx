@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { FaMoon } from 'react-icons/fa'
 import { FiSun } from 'react-icons/fi'
 
-import Container from '@components/Container'
-import NavButton from '@components/NavButton'
+import { Container } from '@components/Container'
+import { NavButton } from '@components/NavButton'
 import routes from '@constants/routes'
 
-function Header(): JSX.Element {
+export function Header(): JSX.Element {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -44,5 +44,3 @@ function Header(): JSX.Element {
     </Flex>
   )
 }
-
-export default Header

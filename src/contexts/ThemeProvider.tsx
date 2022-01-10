@@ -9,16 +9,17 @@ interface ThemeProviderProps {
   children: ReactNode
 }
 
-export const ThemeProvider = ({ children, cookies }: ThemeProviderProps) => (
-  <ChakraProvider
-    resetCSS
-    colorModeManager={cookies ? cookieStorageManager(cookies) : localStorageManager}
-    theme={customTheme}
-  >
-    {children}
-  </ChakraProvider>
-)
-
+export function ThemeProvider({ children, cookies }: ThemeProviderProps) {
+  return (
+    <ChakraProvider
+      resetCSS
+      colorModeManager={cookies ? cookieStorageManager(cookies) : localStorageManager}
+      theme={customTheme}
+    >
+      {children}
+    </ChakraProvider>
+  )
+}
 export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
 
 export function getServerSideProps({ req }: GetServerSidePropsContext): ServerSideProps<{ cookies?: string }> {
