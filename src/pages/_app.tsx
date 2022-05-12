@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
@@ -16,10 +17,16 @@ function App({ Component, pageProps }: AppProps) {
     router.events.on('routeChangeStart', () => setIsLoading(true))
     router.events.on('routeChangeComplete', () => setIsLoading(false))
     router.events.on('routeChangeError', () => setIsLoading(false))
-  }, [])
+  }, [router.events])
 
   return (
-    <ThemeProvider>
+    <ThemeProvider cookies={pageProps.cookies}>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+        />
+      </Head>
       <Layout>
         <Layout.Header />
         <Layout.Content>
@@ -28,7 +35,7 @@ function App({ Component, pageProps }: AppProps) {
             <Layout.Footer />
           </PageContent>
         </Layout.Content>
-        <Layout.MobileDrawer />
+        <Layout.MobileNav />
       </Layout>
     </ThemeProvider>
   )

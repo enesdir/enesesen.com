@@ -1,11 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react'
 
-import { TechStackSection } from '@components/TechStackSection'
+import { TechStackSection } from '@components/TechStack/TechStackSection'
 import techStackItems from '@constants/techStackitems'
 
 export function TechStack() {
   return (
-    <Box py={['8px', '16px']}>
+    <SimpleGrid columns={[1, null, 2]} spacing="10px">
       {techStackItems.map((techStackItem, index) => (
         // https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js
         <TechStackSection
@@ -14,6 +14,6 @@ export function TechStack() {
           stackitems={techStackItem.stackSectionItems}
         />
       ))}
-    </Box>
+    </SimpleGrid>
   )
 }

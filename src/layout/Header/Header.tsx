@@ -1,15 +1,13 @@
-import { Button, Flex, useColorMode, useColorModeValue, Avatar } from '@chakra-ui/react'
-import Link from 'next/link'
-import { FaMoon } from 'react-icons/fa'
-import { FiSun } from 'react-icons/fi'
+import { Flex, useColorModeValue } from '@chakra-ui/react'
 
+import { Avatar } from '@components/Avatar/Avatar'
 import { Container } from '@components/Container'
 import { NavButton } from '@components/NavButton'
+import { ThemeToggle } from '@components/ThemeToggle/ThemeToggle'
 import routes from '@constants/routes'
 
 export function Header(): JSX.Element {
-  const { colorMode, toggleColorMode } = useColorMode()
-
+  const desktopRoutes = routes?.filter((route) => route.isDesktop === true)
   return (
     <Flex
       as="header"
@@ -26,19 +24,13 @@ export function Header(): JSX.Element {
     >
       <Container>
         <Flex justify="space-between" alignItems="center">
-          <Link href="/">
-            <Flex as="a" align="center" cursor="pointer">
-              <Avatar size="sm" name="Enes ESEN" src="/images/enes.jpg" />
-            </Flex>
-          </Link>
+          <Avatar />
           <Flex as="nav" ml="16px">
-            {routes.map((route, index) => (
+            {desktopRoutes.map((route, index) => (
               <NavButton key={String(index)} text={route.text} href={route.href} />
             ))}
           </Flex>
-          <Button onClick={toggleColorMode} variant="ghost" _hover={{ color: 'primary.hover' }}>
-            {colorMode === 'light' ? <FaMoon /> : <FiSun />}
-          </Button>
+          <ThemeToggle />
         </Flex>
       </Container>
     </Flex>

@@ -4,7 +4,7 @@ import { IconType } from 'react-icons/lib'
 interface introTilesType {
   title: string
   desc: string
-  icon?: IconType
+  icon: IconType
 }
 
 const introTiles: introTilesType[] = [

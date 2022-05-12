@@ -1,21 +1,23 @@
 import React from 'react'
 
-import { PageTitle } from '@components/PageTitle'
+import { PageSeo } from '@components/PageSeo'
 import { Portfolio } from '@components/Portfolio'
-import { IPortfolio } from '@interfaces/githubProject'
+import { SectionTitle } from '@components/SectionTitle'
+import { PortfolioType } from '@interfaces/PortfolioType'
 import portfolioData from 'public/data/portfolio.json'
-
-interface PortfolioProps {
-  portfolio: IPortfolio[]
+interface PortfolioPageProps {
+  portfolio: PortfolioType[]
 }
 
-function PortfolioPage({ portfolio = [] }: PortfolioProps) {
+function PortfolioPage({ portfolio = [] }: PortfolioPageProps) {
   return (
-    <Portfolio>
-      <h1 style={{ display: 'none' }}>Enes ESEN</h1>
-      <PageTitle title="Some Things I've Built" />
-      <Portfolio.PortfolioStack portfolio={portfolio} />
-    </Portfolio>
+    <>
+      <PageSeo title="Portfolio" description="Projects that i made" url="https://enesesen.com/portfolio" />
+      <Portfolio>
+        <SectionTitle title="Some Things I've Built" />
+        <Portfolio.PortfolioStack portfolio={portfolio} />
+      </Portfolio>
+    </>
   )
 }
 export async function getStaticProps() {

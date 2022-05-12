@@ -2,12 +2,12 @@ import { Flex, Heading } from '@chakra-ui/react'
 
 import { TRenderProps } from '@typings/commonPropTypes'
 
-interface PageTitleProps extends TRenderProps {
+interface SectionTitleProps extends TRenderProps {
   title: string
 }
-export function PageTitle({ title, children }: PageTitleProps): JSX.Element {
+export function SectionTitle({ title, children }: SectionTitleProps): JSX.Element {
   return (
-    <Flex justify="space-between" py="8px" borderBottomWidth="2px">
+    <Flex justify="space-between" my="1em" borderBottomWidth="2px">
       <Heading size="lg" fontWeight="normal">
         {title}
       </Heading>

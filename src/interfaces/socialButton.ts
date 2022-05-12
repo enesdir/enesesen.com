@@ -1,6 +1,6 @@
 import { routesType } from './routes'
 
-export interface socialAccountsType extends routesType {
+export type socialAccountsType = routesType & {
   ariaLabel?: string
   icon?: any
 }

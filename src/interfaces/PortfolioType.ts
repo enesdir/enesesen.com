@@ -1,4 +1,4 @@
-export type IPortfolio = {
+export type PortfolioType = {
   title: string
   name: string
   description: string

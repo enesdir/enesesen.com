@@ -1,15 +1,18 @@
 import React from 'react'
 
-import { PageTitle } from '@components/PageTitle'
+import { PageSeo } from '@components/PageSeo'
 import { Project } from '@components/Project'
+import { SectionTitle } from '@components/SectionTitle'
 
 function ProjectsPage() {
   return (
-    <Project>
-      <h1 style={{ display: 'none' }}>Enes ESEN</h1>
-      <PageTitle title="Working in Progress" />
-      <Project.ProjectStack />
-    </Project>
+    <>
+      <PageSeo title="Projects" description="Projects that i made" url="https://enesesen.com/projects" />
+      <Project>
+        <SectionTitle title="Working in Progress" />
+        <Project.ProjectStack />
+      </Project>
+    </>
   )
 }
 

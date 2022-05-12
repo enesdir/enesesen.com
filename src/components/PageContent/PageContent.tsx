@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-import { Flex, Spinner } from '@chakra-ui/react'
+import { Container, Flex, Spinner } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 
 import { TRenderProps } from '@typings/commonPropTypes'
@@ -26,13 +26,13 @@ export function PageContent({ children, isLoading }: PageContentProps): JSX.Elem
       {!isLoading ? (
         children
       ) : (
-        <>
+        <Container>
           {renderAfterDelay && (
             <Flex justify="center" my="40px">
               <Spinner size="lg" label="Loading Spinner" speed="0.65s" />
             </Flex>
           )}
-        </>
+        </Container>
       )}
     </>
   )

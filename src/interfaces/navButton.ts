@@ -1,5 +1,5 @@
 import { routesType } from './routes'
 
-export interface navButtonType extends routesType {
+export type navButtonType = routesType & {
   ariaLabel?: string
 }

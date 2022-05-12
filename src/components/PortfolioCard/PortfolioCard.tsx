@@ -4,7 +4,7 @@ import React, { useCallback } from 'react'
 import { IoLogoGithub, IoMdOpen } from 'react-icons/io'
 import { MdFolderOpen } from 'react-icons/md'
 
-import { IPortfolio } from '@interfaces/githubProject'
+import { IPortfolio } from '@interfaces/PortfolioType'
 
 type Props = {
   portfolio: IPortfolio

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://enesesen.com
+
+# Sitemaps
+Sitemap: https://enesesen.com/sitemap.xml

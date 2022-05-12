@@ -1,32 +1,17 @@
-import { Box, Button, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
-import { FaHome } from 'react-icons/fa'
+import ContactSuccess from '@components/ContactSection/Success'
+import { PageSeo } from '@components/PageSeo'
 
-import { Container } from '@components/Container'
-
-function ContactSucessPage() {
+function ContactSuccessPage() {
   return (
-    <Container>
-      <Box textAlign="center">
-        <Heading py="16px">Success!</Heading>
-        <Box as="p" py="8px">
-          Your submission was sent successfully.
-        </Box>
-        <Box as="p" py="8px">
-          For messages and inquiries, look for me to get back to you within 24 hours.
-        </Box>
-      </Box>
-
-      <Link href="/">
-        <Button display="flex" colorScheme="blue" mt="24px" mb="32px" mx="auto">
-          <FaHome />
-          <Box as="span" pl="6px">
-            Navigate To Homepage
-          </Box>
-        </Button>
-      </Link>
-    </Container>
+    <>
+      <PageSeo
+        title="Contact Success"
+        description="For more information about Enes Esen please feel free to reach out through the social media links or contact form."
+        url="https://enesesen.com/contact/success"
+      />
+      <ContactSuccess />
+    </>
   )
 }
 
-export default ContactSucessPage
+export default ContactSuccessPage

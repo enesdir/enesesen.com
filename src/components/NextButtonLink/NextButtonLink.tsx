@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react'
 
 export type NextButtonLinkProps = PropsWithChildren<NextLinkProps & Omit<ButtonProps, 'as'>>
 
-//  Has to be a new component because both chakra and next share the `as` keyword
+// Has to be a new component because both chakra and next share the `as` keyword
 export function NextButtonLink({
   href,
   as,
