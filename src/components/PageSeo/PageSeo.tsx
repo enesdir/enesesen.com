@@ -1,9 +1,8 @@
 import Head from 'next/head'
 
 import { HEAD_TITLE } from '@constants/seo'
-import { TRenderProps } from '@typings/commonPropTypes'
 
-interface PageSeoProps extends TRenderProps {
+type PageSeoProps = {
   title: string
   description: string
   url: string
@@ -11,14 +10,7 @@ interface PageSeoProps extends TRenderProps {
   type?: 'article' | 'website'
 }
 
-export function PageSeo({
-  title,
-  description = 'personal website',
-  type = 'website',
-  image,
-  url,
-  children,
-}: PageSeoProps): JSX.Element {
+export function PageSeo({ title, description = 'personal website', type = 'website', image, url }: PageSeoProps) {
   return (
     <Head>
       <title>{`${HEAD_TITLE} | ${title}`}</title>
@@ -38,8 +30,6 @@ export function PageSeo({
       <meta name="twitter:creator" content="Enes Esen" />
       <meta property="twitter:url" content={url} key="twitter:url" />
       {image ? <meta property="twitter:image" content={image} key="twitter:image" /> : undefined}
-
-      {children}
     </Head>
   )
 }

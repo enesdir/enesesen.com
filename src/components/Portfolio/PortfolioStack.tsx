@@ -1,7 +1,9 @@
-import { SimpleGrid, Button, Center, Box, Input, Text, useColorMode, VStack } from '@chakra-ui/react'
+import { SimpleGrid, Box, Input, Text, useColorMode, VStack, chakra } from '@chakra-ui/react'
 import Image from 'next/image'
 import React, { FormEvent, useState } from 'react'
+import { IoLogoGithub } from 'react-icons/io'
 
+import { NextButtonLink } from '@components/NextButtonLink'
 import { PortfolioCard } from '@components/PortfolioCard'
 import { PortfolioType } from '@interfaces/PortfolioType'
 
@@ -18,31 +20,30 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
     work.title.toLowerCase().includes(searchQuery.toLowerCase())
   )
   const searchNode = () => (
-    <Box pt={5}>
+    <Box pt={5} w="full">
       <Input
         bg={cardBgColor[colorMode]}
         color={cardColor[colorMode]}
         value={searchQuery}
         onChange={(e: FormEvent<HTMLInputElement>) => setSearchQuery(e.currentTarget.value)}
         placeholder="Search for an project"
+        w="full"
       />
     </Box>
   )
   const footerNode = () => (
-    <Center mt={5}>
-      <Button
+    <>
+      <NextButtonLink
+        as={chakra.a}
+        target="_blank"
         size="lg"
-        _hover={{}}
-        _active={{}}
-        _focus={{}}
-        borderColor="green.custom"
-        color="green.custom"
         variant="outline"
-        onClick={() => window.open('https://github.com/codenuru', '_blank')}
+        href="https://github.com/codenuru"
+        leftIcon={<IoLogoGithub />}
       >
         More on GitHub
-      </Button>
-    </Center>
+      </NextButtonLink>
+    </>
   )
   const projectsNode = () => {
     if (!sortedPortfolio.length) {
@@ -55,20 +56,19 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
     }
 
     return (
-      <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5} gap={8}>
+      <SimpleGrid columns={[1, null, 2]} gap={8}>
         {sortedPortfolio.map((work: PortfolioType, index: number) => (
-          // eslint-disable-next-line react/no-array-index-key
           <PortfolioCard portfolio={work} key={index} />
         ))}
-        {footerNode()}
       </SimpleGrid>
     )
   }
 
   return (
-    <VStack spacing={8} align="left">
+    <VStack spacing={8}>
       {searchNode()}
       {projectsNode()}
+      {sortedPortfolio.length && footerNode()}
     </VStack>
   )
 }

@@ -3,12 +3,11 @@ import { LinkProps as NextLinkProps } from 'next/dist/client/link'
 import NextLink from 'next/link'
 import { PropsWithChildren } from 'react'
 
-export type NextButtonLinkProps = PropsWithChildren<NextLinkProps & Omit<ButtonProps, 'as'>>
+export type NextButtonLinkProps = PropsWithChildren<NextLinkProps & ButtonProps>
 
 // Has to be a new component because both chakra and next share the `as` keyword
 export function NextButtonLink({
   href,
-  as,
   replace,
   scroll,
   shallow,
@@ -17,7 +16,7 @@ export function NextButtonLink({
   ...chakraProps
 }: NextButtonLinkProps) {
   return (
-    <NextLink passHref href={href} as={as} replace={replace} scroll={scroll} shallow={shallow} prefetch={prefetch}>
+    <NextLink passHref href={href} replace={replace} scroll={scroll} shallow={shallow} prefetch={prefetch}>
       <Button {...chakraProps}>{children}</Button>
     </NextLink>
   )
