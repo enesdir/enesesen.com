@@ -32,14 +32,17 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
     >
       <CardHeader portfolio={portfolio} />
       {portfolio.imageUrl && (
-        <Box w="sm" shadow="lg" rounded="lg" overflow="hidden" display="block" pb="4em">
-          <Image
-            src={portfolio.imageUrl}
-            alt={`${portfolio.name} image`}
-            width="10em"
-            height="10em"
-            layout="responsive"
-          />
+        <Box
+          w={[284, 340, 360, 'sm']}
+          h={[284, 340, 360, 'sm']}
+          shadow="lg"
+          rounded="lg"
+          overflow="hidden"
+          display="block"
+          mb="4em"
+          position="relative"
+        >
+          <Image src={portfolio.imageUrl} alt={`${portfolio.name} image`} layout="fill" objectFit="fill" />
         </Box>
       )}
       <VStack alignItems="left" bottom={4} left={6} right={6} position="absolute">

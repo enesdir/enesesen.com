@@ -1,11 +1,14 @@
-import { SimpleGrid, Box, Input, Text, useColorMode, VStack, chakra } from '@chakra-ui/react'
+import { SimpleGrid, IconButton, Box, Input, Text, useColorMode, VStack, chakra } from '@chakra-ui/react'
 import Image from 'next/image'
 import React, { FormEvent, useState } from 'react'
 import { IoLogoGithub } from 'react-icons/io'
 
+Link
 import { NextButtonLink } from '@components/NextButtonLink'
 import { PortfolioCard } from '@components/PortfolioCard'
 import { PortfolioType } from '@interfaces/PortfolioType'
+
+import Link from 'next/link'
 
 type PortfolioProps = {
   portfolio: PortfolioType[]
@@ -34,7 +37,6 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
   const footerNode = () => (
     <>
       <NextButtonLink
-        as={chakra.a}
         target="_blank"
         size="lg"
         variant="outline"
