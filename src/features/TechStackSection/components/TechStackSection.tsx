@@ -1,4 +1,4 @@
-import { Box, chakra, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Box, chakra, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 
 import type { TRenderProps } from '@/types/commonPropTypes';
 
@@ -16,7 +16,6 @@ const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
     <Box
       as={chakra.section}
       w="full"
-      p="3% 0.5%"
       my={['8px', '0']}
       bgColor={tileBgColor}
       borderRadius="12px"
@@ -27,11 +26,11 @@ const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
       <Heading as="h3" fontSize="lg" fontWeight="bold" pt="16px" pb="8px" fontStyle="italic">
         {title}
       </Heading>
-      <Flex wrap="wrap">
+      <SimpleGrid columns={3} gap={6}>
         {stackitems.map((stackitem, index) => (
           <TechStackIcon key={String(index)} icon={stackitem.icon} iconName={stackitem.iconName} />
         ))}
-      </Flex>
+      </SimpleGrid>
     </Box>
   );
 };
