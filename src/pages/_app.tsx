@@ -1,32 +1,27 @@
-import { AppProps } from 'next/app'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
+import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-import { PageContent } from '@components/PageContent'
-import { ThemeProvider } from '@contexts/ThemeProvider'
-import { Layout } from '@layout'
+import '@/styles/global.css';
 
-import '@styles/global.css'
+import { ThemeProvider } from '@/contexts/ThemeProvider';
+
+import { PageContent } from '@/components/PageContent';
+
+import { Layout } from '@/layout';
 
 function App({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    router.events.on('routeChangeStart', () => setIsLoading(true))
-    router.events.on('routeChangeComplete', () => setIsLoading(false))
-    router.events.on('routeChangeError', () => setIsLoading(false))
-  }, [router.events])
+    router.events.on('routeChangeStart', () => setIsLoading(true));
+    router.events.on('routeChangeComplete', () => setIsLoading(false));
+    router.events.on('routeChangeError', () => setIsLoading(false));
+  }, [router.events]);
 
   return (
-    <ThemeProvider cookies={pageProps.cookies}>
-      <Head>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-        />
-      </Head>
+    <ThemeProvider>
       <Layout>
         <Layout.Header />
         <Layout.Content>
@@ -38,7 +33,7 @@ function App({ Component, pageProps }: AppProps) {
         <Layout.MobileNav />
       </Layout>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

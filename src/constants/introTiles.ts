@@ -1,10 +1,10 @@
-import { FaCode, FaPencilAlt, FaUniversity } from 'react-icons/fa'
-import { IconType } from 'react-icons/lib'
+import { FaCode, FaPencilAlt, FaUniversity } from 'react-icons/fa';
+import { IconType } from 'react-icons/lib';
 
 interface introTilesType {
-  title: string
-  desc: string
-  icon: IconType
+  title: string;
+  desc: string;
+  icon: IconType;
 }
 
 const introTiles: introTilesType[] = [
@@ -23,6 +23,6 @@ const introTiles: introTilesType[] = [
     desc: 'I have a strong passion for continuous learning and collaborating with others to rapidly expand upon my developer journey while staying open-minded to new technologies and ideas.',
     icon: FaUniversity,
   },
-]
+];
 
-export default introTiles
+export default introTiles;

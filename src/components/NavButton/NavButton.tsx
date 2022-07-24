@@ -1,11 +1,12 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
-import { NextButtonLink } from '@components/NextButtonLink'
-import { navButtonType } from '@interfaces/navButton'
+import { NextButtonLink } from '@/components/NextButtonLink';
+
+import { navButtonType } from '@/interfaces/navButton';
 
 export function NavButton({ text, href }: navButtonType): JSX.Element {
-  const { asPath } = useRouter()
-  const isLast = asPath === href
+  const { asPath } = useRouter();
+  const isLast = asPath === href;
 
   return (
     <NextButtonLink
@@ -20,5 +21,5 @@ export function NavButton({ text, href }: navButtonType): JSX.Element {
     >
       {text}
     </NextButtonLink>
-  )
+  );
 }

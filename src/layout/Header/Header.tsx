@@ -1,13 +1,14 @@
-import { Flex, useColorModeValue } from '@chakra-ui/react'
+import { Flex, useColorModeValue } from '@chakra-ui/react';
 
-import { Avatar } from '@components/Avatar/Avatar'
-import { Container } from '@components/Container'
-import { NavButton } from '@components/NavButton'
-import { ThemeToggle } from '@components/ThemeToggle/ThemeToggle'
-import routes from '@constants/routes'
+import routes from '@/constants/routes';
+
+import { Avatar } from '@/components/Avatar/Avatar';
+import { Container } from '@/components/Container';
+import { NavButton } from '@/components/NavButton';
+import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 
 export function Header(): JSX.Element {
-  const desktopRoutes = routes?.filter((route) => route.isDesktop === true)
+  const desktopRoutes = routes?.filter((route) => route.isDesktop === true);
   return (
     <Flex
       as="header"
@@ -34,5 +35,5 @@ export function Header(): JSX.Element {
         </Flex>
       </Container>
     </Flex>
-  )
+  );
 }

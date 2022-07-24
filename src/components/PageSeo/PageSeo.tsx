@@ -1,35 +1,110 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import { HEAD_TITLE } from '@constants/seo'
+export enum PageTypes {
+  website = 'website',
+  article = 'article',
+}
 
 type PageSeoProps = {
-  title: string
-  description: string
-  url: string
-  image?: string
-  type?: 'article' | 'website'
-}
+  title?: string;
+  siteName?: string;
+  description?: string;
+  url?: string;
+  type?: PageTypes;
+  robots?: string;
+  image?: string;
+  date?: string;
+  templateTitle?: string;
+};
 
-export function PageSeo({ title, description = 'personal website', type = 'website', image, url }: PageSeoProps) {
+const defaultMeta = {
+  title: 'Enes ESEN',
+  siteName: 'EnesESEN',
+  description:
+    'Enes ESEN is a software developer eager to learn, share, and teach web development along with turning ideas into applications.',
+  url: 'https://enesesen.com',
+  type: 'website',
+  robots: 'follow, index',
+  image: 'https://res.cloudinary.com/enesesen/image/upload/v1658665747/banners/enesesen-banner_zf1tct.png',
+};
+
+export function PageSeo(props: PageSeoProps) {
+  const router = useRouter();
+  const meta = {
+    ...defaultMeta,
+    ...props,
+  };
+  meta['title'] = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
   return (
     <Head>
-      <title>{`${HEAD_TITLE} | ${title}`}</title>
-      <meta property="title" content={`${HEAD_TITLE} | ${title}`} key="title" />
-      <meta name="description" content={description} key="description" />
-      <meta name="author" content="Enes Esen" />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="Enes Esen's Website" />
-      <meta property="og:title" content={`${HEAD_TITLE} | ${title}`} key="og:title" />
-      <meta property="og:description" content={description} key="og:description" />
-      <meta property="og:type" content={type} key="og:type" />
-      <meta property="og:url" content={url} key="og:url" />
-      {image ? <meta property="og:image" content={image} key="og:image" /> : undefined}
+      <title>{meta.title}</title>
+      <meta name="robots" content={meta.robots} />
+      <meta content={meta.description} name="description" />
+      <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+      <link rel="canonical" href={`${meta.url}${router.asPath}`} />
+      {/* Open Graph */}
+      <meta property="og:type" content={meta.type} />
+      <meta property="og:site_name" content={meta.siteName} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:title" content={meta.title} />
+      <meta name="image" property="og:image" content={meta.image} />
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@codenuru" />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={meta.image} />
+      {meta.date && (
+        <>
+          <meta property="article:published_time" content={meta.date} />
+          <meta name="publish_date" property="og:publish_date" content={meta.date} />
+          <meta name="author" property="article:author" content="Enes ESEN" />
+        </>
+      )}
 
-      <meta property="twitter:title" content={`${HEAD_TITLE} | ${title}`} key="twitter:title" />
-      <meta property="twitter:description" content={description} key="twitter:description" />
-      <meta name="twitter:creator" content="Enes Esen" />
-      <meta property="twitter:url" content={url} key="twitter:url" />
-      {image ? <meta property="twitter:image" content={image} key="twitter:image" /> : undefined}
+      {/* Favicons */}
+      {favicons.map((linkProps) => (
+        <link key={linkProps.href} {...linkProps} />
+      ))}
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content="#ffffff" />
     </Head>
-  )
+  );
 }
+
+type Favicons = {
+  rel: string;
+  href: string;
+  sizes?: string;
+  type?: string;
+};
+
+const favicons: Array<Favicons> = [
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: '/favicon/favicon-32x32.png',
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '96x96',
+    href: '/favicon/favicon-96x96.png',
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '16x16',
+    href: '/favicon/favicon-16x16.png',
+  },
+  {
+    rel: 'shortcut icon',
+    href: '/favicon/favicon.ico',
+  },
+  {
+    rel: 'manifest',
+    href: '/favicon/manifest.json',
+  },
+];

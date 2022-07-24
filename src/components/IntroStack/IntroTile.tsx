@@ -1,11 +1,11 @@
-import { Box, Icon, useColorModeValue } from '@chakra-ui/react'
+import { Box, Icon, useColorModeValue } from '@chakra-ui/react';
 
-import { IntroTileProps } from '@interfaces/introTile'
+import { IntroTileProps } from '@/interfaces/introTile';
 
 export function IntroTile({ title, icon, desc }: IntroTileProps) {
-  const tileBorderColor = useColorModeValue('gray.100', 'gray.700')
-  const tileColor = useColorModeValue('primary.light', 'primary.dark')
-  const tileBgColor = useColorModeValue('white', 'gray.800')
+  const tileBorderColor = useColorModeValue('gray.100', 'gray.700');
+  const tileColor = useColorModeValue('primary.light', 'primary.dark');
+  const tileBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Box
@@ -25,5 +25,5 @@ export function IntroTile({ title, icon, desc }: IntroTileProps) {
       </Box>
       <Box as="p">{desc}</Box>
     </Box>
-  )
+  );
 }

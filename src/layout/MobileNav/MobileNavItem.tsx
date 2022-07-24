@@ -1,13 +1,13 @@
-import { chakra, MenuItem, useColorModeValue, Icon } from '@chakra-ui/react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { chakra, Icon, MenuItem, useColorModeValue } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import { mobileRoutesType } from '@interfaces/mobileRoutes'
+import type { mobileRoutesType } from '@/interfaces/mobileRoutes';
 
 export default function MobileNavItem({ icon, href, text }: mobileRoutesType) {
-  const primaryColor = useColorModeValue('primary.light', 'primary.dark')
-  const { asPath } = useRouter()
-  const isCurrentRoute = asPath === href
+  const primaryColor = useColorModeValue('primary.light', 'primary.dark');
+  const { asPath } = useRouter();
+  const isCurrentRoute = asPath === href;
   return (
     <Link href={href} passHref>
       <MenuItem
@@ -19,5 +19,5 @@ export default function MobileNavItem({ icon, href, text }: mobileRoutesType) {
         {text}
       </MenuItem>
     </Link>
-  )
+  );
 }

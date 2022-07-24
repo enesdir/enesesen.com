@@ -1,8 +1,10 @@
-import { PageSeo } from '@components/PageSeo'
-import { HEAD_TITLE } from '@constants/seo'
-import { TRenderProps } from '@typings/commonPropTypes'
+import { HEAD_TITLE } from '@/constants/seo';
 
-import PortfolioStack from './PortfolioStack'
+import { PageSeo } from '@/components/PageSeo';
+
+import { TRenderProps } from '@/typings/commonPropTypes';
+
+import PortfolioStack from './PortfolioStack';
 
 export function Portfolio({ children }: TRenderProps) {
   return (
@@ -10,7 +12,7 @@ export function Portfolio({ children }: TRenderProps) {
       <PageSeo title={`${HEAD_TITLE} | Portfolio`} description="Projects that i made" url="https://enesesen.com" />
       {children}
     </>
-  )
+  );
 }
 
-Portfolio.PortfolioStack = PortfolioStack
+Portfolio.PortfolioStack = PortfolioStack;

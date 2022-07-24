@@ -1,6 +1,6 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { socialAccountsType } from '@interfaces/socialButton'
+import type { socialAccountsType } from '@/interfaces/socialButton';
 
 const socialAccounts: socialAccountsType[] = [
   {
@@ -15,6 +15,6 @@ const socialAccounts: socialAccountsType[] = [
     icon: FaLinkedin,
     ariaLabel: 'LinkedIn Profile Link Button',
   },
-]
+];
 
-export default socialAccounts
+export default socialAccounts;

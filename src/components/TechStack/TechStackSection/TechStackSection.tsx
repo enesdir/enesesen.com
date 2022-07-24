@@ -1,15 +1,16 @@
-import { chakra, Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
+import { Box, chakra, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
 
-import { TechStackIcon } from '@components/TechStack/TechStackIcon'
-import { TechStackIconType } from '@interfaces/techStackIconItem'
-import { TRenderProps } from '@typings/commonPropTypes'
+import { TechStackIcon } from '@/components/TechStack/TechStackIcon';
 
-interface TechStackSectionProps extends TRenderProps {
-  title: string
-  stackitems: TechStackIconType[]
-}
+import { TechStackIconType } from '@/interfaces/techStackIconItem';
+import type { TRenderProps } from '@/typings/commonPropTypes';
+
+type TechStackSectionProps = TRenderProps & {
+  title: string;
+  stackitems: TechStackIconType[];
+};
 export function TechStackSection({ title, stackitems }: TechStackSectionProps): JSX.Element {
-  const tileBgColor = useColorModeValue('white', 'gray.800')
+  const tileBgColor = useColorModeValue('white', 'gray.800');
   return (
     <Box
       as={chakra.section}
@@ -31,5 +32,5 @@ export function TechStackSection({ title, stackitems }: TechStackSectionProps): 
         ))}
       </Flex>
     </Box>
-  )
+  );
 }

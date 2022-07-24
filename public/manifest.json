@@ -1,8 +1,0 @@
-{
- "name": "enesesen.com",
- "short_name": "EnesESEN",
- "start_url": ".",
- "display": "standalone",
- "background_color": "#fff",
- "description": "Personal Web App."
-}

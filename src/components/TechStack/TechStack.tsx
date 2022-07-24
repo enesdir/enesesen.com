@@ -1,7 +1,8 @@
-import { SimpleGrid } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react';
 
-import { TechStackSection } from '@components/TechStack/TechStackSection'
-import techStackItems from '@constants/techStackitems'
+import techStackItems from '@/constants/techStackitems';
+
+import { TechStackSection } from '@/components/TechStack/TechStackSection';
 
 export function TechStack() {
   return (
@@ -15,5 +16,5 @@ export function TechStack() {
         />
       ))}
     </SimpleGrid>
-  )
+  );
 }

@@ -1,27 +1,28 @@
-import { SimpleGrid, IconButton, Box, Input, Text, useColorMode, VStack, chakra } from '@chakra-ui/react'
-import Image from 'next/image'
-import React, { FormEvent, useState } from 'react'
-import { IoLogoGithub } from 'react-icons/io'
+import { Box, Input, SimpleGrid, Text, useColorMode, VStack } from '@chakra-ui/react';
+import Image from 'next/image';
+import React, { FormEvent, useState } from 'react';
+import { IoLogoGithub } from 'react-icons/io';
 
-Link
-import { NextButtonLink } from '@components/NextButtonLink'
-import { PortfolioCard } from '@components/PortfolioCard'
-import { PortfolioType } from '@interfaces/PortfolioType'
+Link;
+import Link from 'next/link';
 
-import Link from 'next/link'
+import { NextButtonLink } from '@/components/NextButtonLink';
+import { PortfolioCard } from '@/components/PortfolioCard';
+
+import { PortfolioType } from '@/interfaces/PortfolioType';
 
 type PortfolioProps = {
-  portfolio: PortfolioType[]
-}
+  portfolio: PortfolioType[];
+};
 
 export default function Portfolio({ portfolio = [] }: PortfolioProps) {
-  const { colorMode } = useColorMode()
-  const cardBgColor = { light: 'white', dark: 'gray.900' }
-  const cardColor = { light: 'gray.900', dark: 'white' }
-  const [searchQuery, setSearchQuery] = useState('')
+  const { colorMode } = useColorMode();
+  const cardBgColor = { light: 'white', dark: 'gray.900' };
+  const cardColor = { light: 'gray.900', dark: 'white' };
+  const [searchQuery, setSearchQuery] = useState('');
   const sortedPortfolio = portfolio.filter((work: PortfolioType) =>
     work.title.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  );
   const searchNode = () => (
     <Box pt={5} w="full">
       <Input
@@ -33,7 +34,7 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
         w="full"
       />
     </Box>
-  )
+  );
   const footerNode = () => (
     <>
       <NextButtonLink
@@ -46,7 +47,7 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
         More on GitHub
       </NextButtonLink>
     </>
-  )
+  );
   const projectsNode = () => {
     if (!sortedPortfolio.length) {
       return (
@@ -54,17 +55,17 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
           <Image src="/images/no-items.svg" alt="No projects found!" width="240px" height="240px" />
           <Text>No projects found!</Text>
         </VStack>
-      )
+      );
     }
 
     return (
-      <SimpleGrid columns={[1, null, 2]} gap={8}>
+      <SimpleGrid w="full" h="full" columns={[1, 1, 2, 2]} gap={8}>
         {sortedPortfolio.map((work: PortfolioType, index: number) => (
           <PortfolioCard portfolio={work} key={index} />
         ))}
       </SimpleGrid>
-    )
-  }
+    );
+  };
 
   return (
     <VStack spacing={8}>
@@ -72,5 +73,5 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
       {projectsNode()}
       {sortedPortfolio.length && footerNode()}
     </VStack>
-  )
+  );
 }

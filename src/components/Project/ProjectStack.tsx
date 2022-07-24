@@ -1,4 +1,4 @@
-import { Image, Text, VStack } from '@chakra-ui/react'
+import { Image, Text, VStack } from '@chakra-ui/react';
 
 export default function Project() {
   return (
@@ -8,5 +8,5 @@ export default function Project() {
         <Text>No projects found!</Text>
       </VStack>
     </VStack>
-  )
+  );
 }

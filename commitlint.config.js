@@ -1,9 +1,12 @@
-/** @type {import('@commitlint/types').UserConfig} */
-const CommitLintConfiguration = {
-  extends: ["@commitlint/config-conventional"],
-  // add your own scope here if needed
-  // "scope-enum": [2, "always", ["components", "pages", "utils"]],
-  "scope-case": [2, "always", "kebab-case"],
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    //   TODO Add Scope Enum Here
+    // 'scope-enum': [2, 'always', ['yourscope', 'yourscope']],
+    'type-enum': [
+      2,
+      'always',
+      ['feat', 'fix', 'docs', 'chore', 'style', 'refactor', 'ci', 'test', 'perf', 'revert', 'vercel'],
+    ],
+  },
 };
-
-module.exports = CommitLintConfiguration;

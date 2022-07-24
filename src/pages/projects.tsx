@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import { PageSeo } from '@components/PageSeo'
-import { Project } from '@components/Project'
-import { SectionTitle } from '@components/SectionTitle'
+import { PageSeo } from '@/components/PageSeo';
+import { Project } from '@/components/Project';
+import { SectionTitle } from '@/components/SectionTitle';
 
 function ProjectsPage() {
   return (
     <>
-      <PageSeo title="Projects" description="Projects that i made" url="https://enesesen.com/projects" />
+      <PageSeo templateTitle="Projects" description="Projects that i made" />
       <Project>
         <SectionTitle title="Working in Progress" />
         <Project.ProjectStack />
       </Project>
     </>
-  )
+  );
 }
 
-export default ProjectsPage
+export default ProjectsPage;

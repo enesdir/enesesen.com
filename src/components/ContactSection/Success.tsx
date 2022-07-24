@@ -1,8 +1,8 @@
-import { Box, Button, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
-import { FaHome } from 'react-icons/fa'
+import { Box, Button, Heading } from '@chakra-ui/react';
+import Link from 'next/link';
+import { FaHome } from 'react-icons/fa';
 
-import { Container } from '@components/Container'
+import { Container } from '@/components/Container';
 
 function ContactSuccess() {
   return (
@@ -26,7 +26,7 @@ function ContactSuccess() {
         </Button>
       </Link>
     </Container>
-  )
+  );
 }
 
-export default ContactSuccess
+export default ContactSuccess;

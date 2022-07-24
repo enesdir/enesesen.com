@@ -1,5 +1,5 @@
-import { routesType } from './routes'
+import type { routesType } from './routes';
 
 export type navButtonType = routesType & {
-  ariaLabel?: string
-}
+  ariaLabel?: string;
+};

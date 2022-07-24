@@ -1,7 +1,7 @@
-import { FaCode, FaHome, FaUser } from 'react-icons/fa'
-import { MdTimeline } from 'react-icons/md'
+import { FaCode, FaHome, FaUser } from 'react-icons/fa';
+import { MdTimeline } from 'react-icons/md';
 
-import { mobileRoutesType } from '@interfaces/mobileRoutes'
+import type { mobileRoutesType } from '@/interfaces/mobileRoutes';
 
 const routes: mobileRoutesType[] = [
   {
@@ -28,6 +28,6 @@ const routes: mobileRoutesType[] = [
     isDesktop: true,
     icon: FaUser,
   },
-]
+];
 
-export default routes
+export default routes;

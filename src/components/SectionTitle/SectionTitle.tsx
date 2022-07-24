@@ -1,10 +1,10 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react';
 
-import { TRenderProps } from '@typings/commonPropTypes'
+import type { TRenderProps } from '@/typings/commonPropTypes';
 
-interface SectionTitleProps extends TRenderProps {
-  title: string
-}
+type SectionTitleProps = TRenderProps & {
+  title: string;
+};
 export function SectionTitle({ title, children }: SectionTitleProps): JSX.Element {
   return (
     <Flex justify="space-between" my="1em" borderBottomWidth="2px">
@@ -13,5 +13,5 @@ export function SectionTitle({ title, children }: SectionTitleProps): JSX.Elemen
       </Heading>
       {children}
     </Flex>
-  )
+  );
 }

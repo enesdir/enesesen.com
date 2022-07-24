@@ -1,6 +1,6 @@
-import { IconButton, chakra } from '@chakra-ui/react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { chakra, IconButton } from '@chakra-ui/react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Avatar(): JSX.Element {
   return (
@@ -21,5 +21,5 @@ export function Avatar(): JSX.Element {
         />
       </IconButton>
     </Link>
-  )
+  );
 }

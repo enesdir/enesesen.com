@@ -1,1 +1,1 @@
-export const HEAD_TITLE = 'Enes ESEN'
+export const HEAD_TITLE = 'Enes ESEN';

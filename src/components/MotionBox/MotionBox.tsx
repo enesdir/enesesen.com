@@ -1,5 +1,5 @@
-import { chakra } from '@chakra-ui/react'
-import { motion, isValidMotionProp } from 'framer-motion'
+import { chakra } from '@chakra-ui/react';
+import { isValidMotionProp, motion } from 'framer-motion';
 
 export const MotionBox = chakra(motion.div, {
   /**
@@ -7,4 +7,4 @@ export const MotionBox = chakra(motion.div, {
    * All other chakra props not matching the motion props will still be forwarded.
    */
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
-})
+});

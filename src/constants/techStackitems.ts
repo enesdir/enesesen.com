@@ -1,28 +1,28 @@
 import {
   SiAmazonaws,
-  SiPython,
+  SiBulma,
   SiCss3,
+  SiDjango,
+  SiEslint,
+  SiGit,
+  SiGnubash,
   SiGraphql,
   SiHtml5,
   SiJavascript,
-  SiDjango,
+  SiMaterialui,
+  SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiPython,
   SiReact,
   SiSass,
   SiServerless,
   SiTailwindcss,
-  SiMaterialui,
-  SiBulma,
   SiTypescript,
   SiWordpress,
-  SiMongodb,
-  SiGit,
-  SiGnubash,
   SiYarn,
-  SiEslint,
-  SiPostgresql,
-} from 'react-icons/si'
+} from 'react-icons/si';
 
 const techStackItems = [
   {
@@ -136,6 +136,6 @@ const techStackItems = [
       },
     ],
   },
-]
+];
 
-export default techStackItems
+export default techStackItems;

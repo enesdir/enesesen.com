@@ -1,9 +1,9 @@
-import { useColorMode, IconButton } from '@chakra-ui/react'
-import { FaMoon } from 'react-icons/fa'
-import { FiSun } from 'react-icons/fi'
+import { IconButton, useColorMode } from '@chakra-ui/react';
+import { FaMoon } from 'react-icons/fa';
+import { FiSun } from 'react-icons/fi';
 
 export function ThemeToggle(): JSX.Element {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <IconButton
@@ -15,5 +15,5 @@ export function ThemeToggle(): JSX.Element {
       _hover={{ color: 'primary.hover' }}
       aria-label="Dark & light mode toggle button"
     />
-  )
+  );
 }

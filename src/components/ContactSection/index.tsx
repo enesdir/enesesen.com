@@ -1,7 +1,7 @@
-import { SectionTitle } from '@components/SectionTitle'
+import { SectionTitle } from '@/components/SectionTitle';
 
-import { Form } from './Form'
-import { OtherContactMethods } from './Other'
+import { Form } from './Form';
+import { OtherContactMethods } from './Other';
 
 function ContactSection() {
   return (
@@ -10,7 +10,7 @@ function ContactSection() {
       <Form />
       <OtherContactMethods />
     </>
-  )
+  );
 }
 
-export default ContactSection
+export default ContactSection;

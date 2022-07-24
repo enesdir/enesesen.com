@@ -1,11 +1,12 @@
-import { Box, Flex, Icon, Link } from '@chakra-ui/react'
-import { FaSignature } from 'react-icons/fa'
+import { Box, Flex, Icon, Link } from '@chakra-ui/react';
+import { FaSignature } from 'react-icons/fa';
 
-import { Container } from '@components/Container'
-import { SocialButton } from '@components/SocialButton'
-import socialAccounts from '@constants/socialAccounts'
+import socialAccounts from '@/constants/socialAccounts';
 
-export function Footer(): JSX.Element {
+import { Container } from '@/components/Container';
+import { SocialButton } from '@/components/SocialButton';
+
+export function Footer() {
   return (
     <Flex as="footer" my="16px" display={['none', 'flex']}>
       <Container>
@@ -33,5 +34,5 @@ export function Footer(): JSX.Element {
         </Flex>
       </Container>
     </Flex>
-  )
+  );
 }

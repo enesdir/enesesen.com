@@ -1,6 +1,6 @@
-import { Box } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react';
 
-import { SectionTitle } from '@components/SectionTitle'
+import { SectionTitle } from '@/components/SectionTitle';
 
 export function AboutSection() {
   return (
@@ -14,5 +14,5 @@ export function AboutSection() {
         opportunities & projects to rapidly continue improving as a developer.
       </Box>
     </>
-  )
+  );
 }

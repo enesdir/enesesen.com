@@ -1,25 +1,24 @@
-import { Box, Flex, Heading, useColorModeValue, keyframes } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Box, Flex, Heading, keyframes, useColorModeValue } from '@chakra-ui/react';
+import Image from 'next/image';
 
-import { MotionBox } from '@components/MotionBox/MotionBox'
+import { MotionBox } from '@/components/MotionBox/MotionBox';
 
 export default function Hero() {
-  const color = useColorModeValue('primary.light', 'primary.dark')
+  const color = useColorModeValue('primary.light', 'primary.dark');
   const animationKeyframes = keyframes`
   0%  { top: 2px; }
   20% { top: -40px; }
   40% { top: -80px; }
   60% { top: -120px; }
   80% { top: -160px; }
-`
-  const animation = `${animationKeyframes} 12s ease-in-out infinite`
+`;
+  const animation = `${animationKeyframes} 12s ease-in-out infinite`;
   return (
     <Flex flexDir={['column', 'row']} align="center" justify="space-around" mt={['0', '24px']} mb="24px">
       <Flex height={['auto', '240px']} my={['32px', '0']} flexDir="column" justify="center">
         <Heading as="h1" fontSize="5xl">
           Enes Esen
         </Heading>
-
         <Heading as="h2" fontSize="2xl" color={color} mx={['auto', '0']}>
           <Box as="span" float="left" h="40px" mr="6px">
             Software
@@ -49,5 +48,5 @@ export default function Hero() {
         alt="Futuristic Software Developer Illustration"
       />
     </Flex>
-  )
+  );
 }

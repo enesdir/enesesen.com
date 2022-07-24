@@ -1,29 +1,32 @@
-import { Box, Text, VStack, useColorMode } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Box, Text, useColorMode, VStack } from '@chakra-ui/react';
 
-import { MotionBox } from '@components/MotionBox/MotionBox'
-import { PortfolioType } from '@interfaces/PortfolioType'
+import { Image } from '@/components/ImageNext/ImageNext';
+import { MotionBox } from '@/components/MotionBox/MotionBox';
 
-import { CardHeader } from './CardHeader'
-import { TechnologiesNode } from './TechnologiesNode'
+import { PortfolioType } from '@/interfaces/PortfolioType';
+
+import { CardHeader } from './CardHeader';
+import { TechnologiesNode } from './TechnologiesNode';
 
 type PortfolioCardProps = {
-  portfolio: PortfolioType
-}
+  portfolio: PortfolioType;
+};
 
 export function PortfolioCard({ portfolio }: PortfolioCardProps) {
-  const { colorMode } = useColorMode()
-  const cardBgColor = { light: 'white', dark: 'gray.900' }
-  const cardColor = { light: 'gray.900', dark: 'white' }
+  const { colorMode } = useColorMode();
+  const cardBgColor = { light: 'white', dark: 'gray.900' };
+  const cardColor = { light: 'gray.900', dark: 'white' };
 
   return (
     <MotionBox
       bg={cardBgColor[colorMode]}
       color={cardColor[colorMode]}
       borderRadius="2xl"
-      px={6}
-      py={4}
+      p={4}
+      borderWidth="1px"
       minH={40}
+      w="full"
+      h="full"
       border="1px solid"
       borderColor="grey.300"
       boxShadow="dark-sm"
@@ -33,11 +36,11 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
       <CardHeader portfolio={portfolio} />
       {portfolio.imageUrl && (
         <Box
-          w={[284, 340, 360, 'sm']}
-          h={[284, 340, 360, 'sm']}
+          w="full"
+          h={['20rem', '30rem', '26rem', '30rem']}
           shadow="lg"
-          rounded="lg"
           overflow="hidden"
+          rounded="lg"
           display="block"
           mb="4em"
           position="relative"
@@ -52,5 +55,5 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
         <TechnologiesNode technologies={portfolio.technologies} />
       </VStack>
     </MotionBox>
-  )
+  );
 }

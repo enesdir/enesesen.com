@@ -1,16 +1,17 @@
-import { theme as defaultTheme, extendTheme } from '@chakra-ui/react'
-import { createBreakpoints, mode } from '@chakra-ui/theme-tools'
+import { extendTheme, theme as defaultTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-const body = `Jost,${defaultTheme.fonts.body}`
-const heading = `Jost,${defaultTheme.fonts.heading}`
-const mono = `Cousine,${defaultTheme.fonts.mono}`
+const body = `Jost,${defaultTheme.fonts.body}`;
+const heading = `Jost,${defaultTheme.fonts.heading}`;
+const mono = `Cousine,${defaultTheme.fonts.mono}`;
 
-const breakpoints = createBreakpoints({
-  sm: '40em',
-  md: '52em',
-  lg: '64em',
+const breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
   xl: '80em',
-})
+  '2xl': '96em',
+};
 
 const theme = extendTheme({
   styles: {
@@ -44,6 +45,6 @@ const theme = extendTheme({
     heading,
     mono,
   },
-})
+});
 
-export default theme
+export default theme;

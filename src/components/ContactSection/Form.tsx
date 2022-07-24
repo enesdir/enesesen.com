@@ -1,11 +1,11 @@
-import { Box, Button, Flex, Input, InputGroup, InputLeftElement, Textarea, useColorModeValue } from '@chakra-ui/react'
-import { FaUserAlt, FaAt } from 'react-icons/fa'
+import { Box, Button, Flex, Input, InputGroup, InputLeftElement, Textarea, useColorModeValue } from '@chakra-ui/react';
+import { FaAt, FaUserAlt } from 'react-icons/fa';
 
-import { useContactForm } from '@hooks/useContactForm'
+import { useContactForm } from '@/hooks/useContactForm';
 
 export function Form() {
-  const { onSubmit, onInputChange, isSubmitting, errorMessage } = useContactForm()
-  const color = useColorModeValue('primary.light', 'primary.dark')
+  const { onSubmit, onInputChange, isSubmitting, errorMessage } = useContactForm();
+  const color = useColorModeValue('primary.light', 'primary.dark');
 
   return (
     <Box as="form" onSubmit={onSubmit}>
@@ -41,5 +41,5 @@ export function Form() {
         )}
       </Flex>
     </Box>
-  )
+  );
 }

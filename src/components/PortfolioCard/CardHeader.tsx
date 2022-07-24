@@ -1,13 +1,13 @@
-import { chakra, Box, Text, Flex, IconButton, Tooltip } from '@chakra-ui/react'
-import Link from 'next/link'
-import { IoMdOpen } from 'react-icons/io'
-import { SiGit } from 'react-icons/si'
+import { Box, chakra, Flex, IconButton, Text, Tooltip } from '@chakra-ui/react';
+import Link from 'next/link';
+import { IoMdOpen } from 'react-icons/io';
+import { SiGit } from 'react-icons/si';
 
-import { PortfolioType } from '@interfaces/PortfolioType'
+import { PortfolioType } from '@/interfaces/PortfolioType';
 
 type CardHeaderProps = {
-  portfolio: Pick<PortfolioType, 'title' | 'url' | 'demoUrl'>
-}
+  portfolio: Pick<PortfolioType, 'title' | 'url' | 'demoUrl'>;
+};
 
 export function CardHeader({ portfolio }: CardHeaderProps) {
   return (
@@ -40,5 +40,5 @@ export function CardHeader({ portfolio }: CardHeaderProps) {
         </Tooltip>
       </Box>
     </Flex>
-  )
+  );
 }

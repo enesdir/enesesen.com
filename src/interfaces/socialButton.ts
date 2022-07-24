@@ -1,6 +1,6 @@
-import { routesType } from './routes'
+import type { routesType } from './routes';
 
 export type socialAccountsType = routesType & {
-  ariaLabel?: string
-  icon?: any
-}
+  ariaLabel?: string;
+  icon?: any;
+};

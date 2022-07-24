@@ -1,26 +1,26 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-import { Container, Flex, Spinner } from '@chakra-ui/react'
-import { useState, useEffect } from 'react'
+import { Container, Flex, Spinner } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
-import { TRenderProps } from '@typings/commonPropTypes'
+import type { TRenderProps } from '@/typings/commonPropTypes';
 
-interface PageContentProps extends TRenderProps {
-  isLoading: boolean
-}
+type PageContentProps = TRenderProps & {
+  isLoading: boolean;
+};
 
-export function PageContent({ children, isLoading }: PageContentProps): JSX.Element {
-  const [renderAfterDelay, setRenderAfterDelay] = useState(true)
+export function PageContent({ children, isLoading }: PageContentProps) {
+  const [renderAfterDelay, setRenderAfterDelay] = useState(true);
 
   useEffect(() => {
     if (isLoading) {
       setTimeout(() => {
-        setRenderAfterDelay(true)
-      }, 1000)
+        setRenderAfterDelay(true);
+      }, 1000);
     }
     return () => {
-      setRenderAfterDelay(false)
-    }
-  }, [isLoading])
+      setRenderAfterDelay(false);
+    };
+  }, [isLoading]);
   return (
     <>
       {!isLoading ? (
@@ -35,5 +35,5 @@ export function PageContent({ children, isLoading }: PageContentProps): JSX.Elem
         </Container>
       )}
     </>
-  )
+  );
 }

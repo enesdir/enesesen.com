@@ -1,13 +1,14 @@
-import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList, useColorModeValue } from '@chakra-ui/react'
-import { FiMenu } from 'react-icons/fi'
+import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList, useColorModeValue } from '@chakra-ui/react';
+import { FiMenu } from 'react-icons/fi';
 
-import { Avatar } from '@components/Avatar/Avatar'
-import { SocialButton } from '@components/SocialButton'
-import { ThemeToggle } from '@components/ThemeToggle/ThemeToggle'
-import routes from '@constants/routes'
-import socialAccounts from '@constants/socialAccounts'
+import routes from '@/constants/routes';
+import socialAccounts from '@/constants/socialAccounts';
 
-import MobileNavItem from './MobileNavItem'
+import { Avatar } from '@/components/Avatar/Avatar';
+import { SocialButton } from '@/components/SocialButton';
+import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
+
+import MobileNavItem from './MobileNavItem';
 
 export function MobileNav() {
   return (
@@ -65,5 +66,5 @@ export function MobileNav() {
         </Menu>
       </Flex>
     </Flex>
-  )
+  );
 }

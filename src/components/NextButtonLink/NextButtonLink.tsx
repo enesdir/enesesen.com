@@ -1,14 +1,14 @@
-import { chakra, Button, ButtonProps } from '@chakra-ui/react'
-import { LinkProps as NextLinkProps } from 'next/dist/client/link'
-import NextLink from 'next/link'
-import { PropsWithChildren } from 'react'
+import { Button, ButtonProps, chakra } from '@chakra-ui/react';
+import { LinkProps as NextLinkProps } from 'next/dist/client/link';
+import NextLink from 'next/link';
+import { PropsWithChildren } from 'react';
 
 export type NextButtonLinkProps = PropsWithChildren<
   NextLinkProps &
     ButtonProps & {
-      target?: string
+      target?: string;
     }
->
+>;
 
 // Has to be a new component because both chakra and next share the `as` keyword
 export function NextButtonLink({
@@ -28,5 +28,5 @@ export function NextButtonLink({
         {children}
       </Button>
     </NextLink>
-  )
+  );
 }

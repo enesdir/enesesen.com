@@ -1,8 +1,8 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react';
 
-import introTiles from '@constants/introTiles'
+import introTiles from '@/constants/introTiles';
 
-import { IntroTile } from './IntroTile'
+import { IntroTile } from './IntroTile';
 
 export function IntroStack() {
   return (
@@ -11,5 +11,5 @@ export function IntroStack() {
         <IntroTile key={String(index)} title={introTile.title} icon={introTile.icon} desc={introTile.desc} />
       ))}
     </Flex>
-  )
+  );
 }

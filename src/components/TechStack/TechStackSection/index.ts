@@ -1,1 +1,1 @@
-export { TechStackSection } from './TechStackSection'
+export { TechStackSection } from './TechStackSection';

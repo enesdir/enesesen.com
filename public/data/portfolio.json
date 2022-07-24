@@ -18,12 +18,12 @@
   {
     "title": "CN-MovieDB",
     "description": "Fetch External API Show React and Material-UI",
-    "technologies": ["TypeScript",  "React"],
+    "technologies": ["TypeScript", "React"],
     "url": "https://github.com/codenuru/cn-moviedb",
     "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app",
     "imageUrl": ""
   },
-   {
+  {
     "title": "To-do App",
     "description": "Todo Application with Svelte/Sapper",
     "technologies": ["TypeScript", "Svelte", "Sapper"],
