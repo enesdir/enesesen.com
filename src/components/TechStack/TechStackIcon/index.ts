@@ -1,1 +1,0 @@
-export { TechStackIcon } from './TechStackIcon';

@@ -1,6 +1,6 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
-import type { TRenderProps } from '@/typings/commonPropTypes';
+import type { TRenderProps } from '@/types/commonPropTypes';
 
 type SectionTitleProps = TRenderProps & {
   title: string;

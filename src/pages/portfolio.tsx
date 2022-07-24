@@ -1,11 +1,10 @@
-import portfolioData from 'public/data/portfolio.json';
 import React from 'react';
 
 import { PageSeo } from '@/components/PageSeo';
-import { Portfolio } from '@/components/Portfolio';
 import { SectionTitle } from '@/components/SectionTitle';
+import { PortfolioStack, PortfolioType } from '@/features/PortfolioSection/';
 
-import type { PortfolioType } from '@/interfaces/PortfolioType';
+import portfolioData from '~/data/portfolio.json';
 
 type PortfolioPageProps = {
   portfolio: PortfolioType[];
@@ -15,10 +14,8 @@ function PortfolioPage({ portfolio = [] }: PortfolioPageProps) {
   return (
     <>
       <PageSeo templateTitle="Portfolio" description="Projects that i made" />
-      <Portfolio>
-        <SectionTitle title="Some Things I've Built" />
-        <Portfolio.PortfolioStack portfolio={portfolio} />
-      </Portfolio>
+      <SectionTitle title="Some Things I've Built" />
+      <PortfolioStack portfolio={portfolio} />
     </>
   );
 }

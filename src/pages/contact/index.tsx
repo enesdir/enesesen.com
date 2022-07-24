@@ -1,8 +1,8 @@
 import { Fade } from '@chakra-ui/react';
 
-import { AboutSection } from '@/components/About/AboutSection';
-import ContactSection from '@/components/ContactSection';
 import { PageSeo } from '@/components/PageSeo';
+import { AboutSection } from '@/features/AboutSection';
+import { ContactSection } from '@/features/ContactSection';
 
 function ContactPage() {
   return (

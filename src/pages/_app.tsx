@@ -7,8 +7,7 @@ import '@/styles/global.css';
 import { ThemeProvider } from '@/contexts/ThemeProvider';
 
 import { PageContent } from '@/components/PageContent';
-
-import { Layout } from '@/layout';
+import { Content, Footer, Header, MobileNav } from '@/features/Layout';
 
 function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,16 +21,14 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider>
-      <Layout>
-        <Layout.Header />
-        <Layout.Content>
-          <PageContent isLoading={isLoading}>
-            <Component {...pageProps} />
-            <Layout.Footer />
-          </PageContent>
-        </Layout.Content>
-        <Layout.MobileNav />
-      </Layout>
+      <Header />
+      <Content>
+        <PageContent isLoading={isLoading}>
+          <Component {...pageProps} />
+          <Footer />
+        </PageContent>
+      </Content>
+      <MobileNav />
     </ThemeProvider>
   );
 }

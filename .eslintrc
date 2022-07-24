@@ -45,12 +45,14 @@
           ["^.+\\.s?css$"],
           // Lib and hooks
           ["^@/lib", "^@/hooks"],
-          // static data
-          ["^@/constants"],
           // store
           ["^@/contexts", "hooks"],
           // components
-          ["^@/components", "^@/container"],
+          ["^@/components", "^@/features"],
+          // static data
+          ["^@/features/constants"],
+          // typings
+          ["^@/types", "^@/features/types"],
           // Other imports
           ["^@/"],
           // relative paths up until 3 level

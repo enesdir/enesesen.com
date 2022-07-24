@@ -1,10 +1,10 @@
 import { Fade } from '@chakra-ui/react';
 
-import Hero from '@/components/Hero/Hero';
-import { IntroStack } from '@/components/IntroStack/IntroStack';
 import { PageSeo } from '@/components/PageSeo';
 import { SectionTitle } from '@/components/SectionTitle';
-import { TechStack } from '@/components/TechStack/TechStack';
+import { Hero } from '@/features/HeroSection/';
+import { IntroStack } from '@/features/IntroSection/';
+import { TechStack } from '@/features/TechStackSection/';
 
 export function HomePage() {
   return (

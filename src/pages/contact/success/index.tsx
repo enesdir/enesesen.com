@@ -1,5 +1,5 @@
-import ContactSuccess from '@/components/ContactSection/Success';
 import { PageSeo } from '@/components/PageSeo';
+import { ContactSuccess } from '@/features/ContactSection';
 
 function ContactSuccessPage() {
   return (

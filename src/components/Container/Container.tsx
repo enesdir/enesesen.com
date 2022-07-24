@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-import { TRenderProps } from '@/typings/commonPropTypes';
+import { TRenderProps } from '@/types/commonPropTypes';
 
 export function Container({ children }: TRenderProps): JSX.Element {
   return (

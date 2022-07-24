@@ -2,7 +2,7 @@
 import { Container, Flex, Spinner } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
-import type { TRenderProps } from '@/typings/commonPropTypes';
+import type { TRenderProps } from '@/types/commonPropTypes';
 
 type PageContentProps = TRenderProps & {
   isLoading: boolean;
