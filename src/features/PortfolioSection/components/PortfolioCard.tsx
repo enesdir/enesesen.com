@@ -23,9 +23,8 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
       borderRadius="2xl"
       p={4}
       borderWidth="1px"
-      minH={40}
+      minH={34}
       w="full"
-      h="full"
       border="1px solid"
       borderColor="grey.300"
       boxShadow="dark-sm"
@@ -35,19 +34,18 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
       <CardHeader portfolio={portfolio} />
       {portfolio.imageUrl && (
         <AspectRatio
-          minH={80}
           ratio={14 / 16}
           position="relative"
           shadow="lg"
           overflow="hidden"
           rounded="lg"
           display="block"
-          mb="4em"
+          mb="1em"
         >
           <Image src={portfolio.imageUrl} alt={`${portfolio.name} image`} layout="fill" objectFit="fill" />
         </AspectRatio>
       )}
-      <VStack alignItems="left" bottom={4} left={6} right={6} position="absolute">
+      <VStack alignItems="stretch">
         <Text fontWeight="medium" noOfLines={1}>
           {portfolio.description}
         </Text>

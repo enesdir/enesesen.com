@@ -36,17 +36,15 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
     </Box>
   );
   const footerNode = () => (
-    <>
-      <NextButtonLink
-        target="_blank"
-        size="lg"
-        variant="outline"
-        href="https://github.com/codenuru"
-        leftIcon={<IoLogoGithub />}
-      >
-        More on GitHub
-      </NextButtonLink>
-    </>
+    <NextButtonLink
+      target="_blank"
+      size="lg"
+      variant="outline"
+      href="https://github.com/codenuru"
+      leftIcon={<IoLogoGithub />}
+    >
+      More on GitHub
+    </NextButtonLink>
   );
   const projectsNode = () => {
     if (!sortedPortfolio.length) {
@@ -59,11 +57,14 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
     }
 
     return (
-      <SimpleGrid w="full" h="full" columns={[1, 1, 2, 2]} gap={8}>
-        {sortedPortfolio.map((work: PortfolioType, index: number) => (
-          <PortfolioCard portfolio={work} key={index} />
-        ))}
-      </SimpleGrid>
+      <>
+        <SimpleGrid columns={[1, 2]} gap={8}>
+          {sortedPortfolio.map((work: PortfolioType, index: number) => (
+            <PortfolioCard portfolio={work} key={index} />
+          ))}
+        </SimpleGrid>
+        {footerNode()}
+      </>
     );
   };
 
@@ -71,7 +72,6 @@ export default function Portfolio({ portfolio = [] }: PortfolioProps) {
     <VStack spacing={8}>
       {searchNode()}
       {projectsNode()}
-      {sortedPortfolio.length && footerNode()}
     </VStack>
   );
 }
