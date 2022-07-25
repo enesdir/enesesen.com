@@ -1,4 +1,4 @@
-import { Box, Icon, useColorModeValue } from '@chakra-ui/react';
+import { Box, chakra, Icon, useColorModeValue } from '@chakra-ui/react';
 
 import { IntroTileProps } from '../types/introTile';
 
@@ -9,9 +9,10 @@ const IntroTile = ({ title, icon, desc }: IntroTileProps) => {
 
   return (
     <Box
-      w={['100%', '32%']}
-      p="3% 2.5%"
-      my={['8px', '0']}
+      as={chakra.section}
+      w="full"
+      px={2}
+      py={4}
       bgColor={tileBgColor}
       borderRadius="12px"
       borderWidth="2px"

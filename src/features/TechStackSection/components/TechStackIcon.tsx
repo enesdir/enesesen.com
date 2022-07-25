@@ -8,10 +8,8 @@ const TechStackIcon = ({ size, icon, iconName }: TechStackIconType) => {
   return (
     <Tooltip label={iconName} placement="bottom" aria-label={iconName}>
       <Box as="span">
-        <Icon as={icon} color={color} fontSize={iconSize} _hover={{ color: 'primary.hover' }} aria-label={iconName} />
-        <Text fontWeight="medium" size={['xs', 'sm', 'md']}>
-          {iconName}
-        </Text>
+        <Icon as={icon} color={color} boxSize={10} _hover={{ color: 'primary.hover' }} aria-label={iconName} />
+        <Text fontSize={11}>{iconName}</Text>
       </Box>
     </Tooltip>
   );
