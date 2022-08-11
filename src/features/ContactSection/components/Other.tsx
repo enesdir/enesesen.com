@@ -1,5 +1,5 @@
 import { Box, Flex, Icon, useColorModeValue } from '@chakra-ui/react';
-import { SiGmail } from 'react-icons/si';
+import { SiTwitter } from 'react-icons/si';
 
 export function OtherContactMethods(): JSX.Element {
   const color = useColorModeValue('primary.light', 'primary.dark');
@@ -10,8 +10,8 @@ export function OtherContactMethods(): JSX.Element {
       </Box>
 
       <Flex justify="center" align="center" my="16px">
-        <Icon as={SiGmail} color={color} boxSize={5} mr="8px" />
-        enes@enesesen.com
+        <Icon as={SiTwitter} color={color} boxSize={5} mr="8px" />
+        @codenuru
       </Flex>
     </Box>
   );
