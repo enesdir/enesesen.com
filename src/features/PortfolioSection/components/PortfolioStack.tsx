@@ -1,10 +1,7 @@
-import { Box, Input, SimpleGrid, Text, useColorMode, VStack } from '@chakra-ui/react';
+import { Box, Input, SimpleGrid, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React, { FormEvent, useState } from 'react';
 import { IoLogoGithub } from 'react-icons/io';
-
-Link;
-import Link from 'next/link';
 
 import { NextButtonLink } from '@/components/NextButtonLink';
 import { PortfolioCard } from '@/features/PortfolioSection/components/PortfolioCard';
@@ -15,19 +12,18 @@ type PortfolioProps = {
   portfolio: PortfolioType[];
 };
 
-export default function Portfolio({ portfolio = [] }: PortfolioProps) {
-  const { colorMode } = useColorMode();
-  const cardBgColor = { light: 'white', dark: 'gray.900' };
-  const cardColor = { light: 'gray.900', dark: 'white' };
+export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
+  const cardBgColor = useColorModeValue('white', 'gray.900');
+  const cardColor = useColorModeValue('gray.900', 'white');
   const [searchQuery, setSearchQuery] = useState('');
   const sortedPortfolio = portfolio.filter((work: PortfolioType) =>
     work.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const searchNode = () => (
-    <Box pt={5} w="full">
+    <Box pt={4} w="full">
       <Input
-        bg={cardBgColor[colorMode]}
-        color={cardColor[colorMode]}
+        bg={cardBgColor}
+        color={cardColor}
         value={searchQuery}
         onChange={(e: FormEvent<HTMLInputElement>) => setSearchQuery(e.currentTarget.value)}
         placeholder="Search for an project"

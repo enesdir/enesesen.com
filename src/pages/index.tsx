@@ -9,7 +9,7 @@ import { TechStack } from '@/features/TechStackSection/';
 export function HomePage() {
   return (
     <>
-      <PageSeo templateTitle="Home" />
+      <PageSeo />
       <Fade in transition={{ enter: { duration: 1.2 } }}>
         <Hero />
         <IntroStack />

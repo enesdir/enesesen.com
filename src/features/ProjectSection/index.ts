@@ -1,3 +1,3 @@
-import ProjectStack from './components/ProjectStack';
+import { ProjectStack } from './components/ProjectStack';
 
 export { ProjectStack };

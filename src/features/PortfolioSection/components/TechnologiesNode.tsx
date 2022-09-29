@@ -1,19 +1,17 @@
-import { HStack, Tag } from '@chakra-ui/react';
-
-import { PortfolioType } from '@/interfaces/PortfolioType';
+import { SimpleGrid, Tag } from '@chakra-ui/react';
 
 type TechnologiesNodeProps = {
-  technologies: PortfolioType['technologies'];
+  technologies: string[];
 };
 
 export function TechnologiesNode({ technologies }: TechnologiesNodeProps) {
   return (
-    <HStack spacing={[2, 6]} align="justify">
+    <SimpleGrid minChildWidth={20} spacing={4}>
       {technologies.map((technology: string, index: number) => (
-        <Tag key={String(index)} size={['sm', 'sm', 'md']}>
+        <Tag key={String(index)} size="lg">
           {technology}
         </Tag>
       ))}
-    </HStack>
+    </SimpleGrid>
   );
 }

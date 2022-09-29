@@ -1,0 +1,52 @@
+[
+  {
+    "title": "CN-Blog",
+    "description": "Example Serverless Blog App written with NextJS",
+    "technologies": ["TypeScript", "Expo", "React-Native", "GraphQL", "Firebase", "Framer-Motion"],
+    "projectDate": "2021",
+    "projectDuration": "3 Months",
+    "projectStatus": "InProgress",
+    "url": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "CN-Blog",
+    "description": "Example Serverless Blog App written with NextJS",
+    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL"],
+    "projectDate": "2021",
+    "projectDuration": "3 Months",
+    "projectStatus": "Completed",
+    "url": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "CN-Market",
+    "description": "Example Landing Page/Store Page Auth with Firebase",
+    "technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
+    "projectDate": "2021",
+    "projectDuration": "3 Months",
+    "projectStatus": "Completed",
+    "url": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "CN-MovieDB",
+    "description": "Fetch External API Show React and Material-UI",
+    "technologies": ["TypeScript", "React"],
+    "projectDate": "2021",
+    "projectDuration": "3 Months",
+    "projectStatus": "Completed",
+    "url": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "To-do App",
+    "description": "Todo Application with Svelte/Sapper",
+    "technologies": ["TypeScript", "Svelte", "Sapper"],
+    "projectDate": "2021",
+    "projectDuration": "3 Months",
+    "projectStatus": "Completed",
+    "url": "",
+    "imageUrl": ""
+  }
+]

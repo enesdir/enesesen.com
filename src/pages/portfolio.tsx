@@ -13,7 +13,7 @@ type PortfolioPageProps = {
 function PortfolioPage({ portfolio = [] }: PortfolioPageProps) {
   return (
     <>
-      <PageSeo templateTitle="Portfolio" description="Projects that i made" />
+      <PageSeo templateTitle="Portfolio" description="Some Works that i made" />
       <SectionTitle title="Some Things I've Built" />
       <PortfolioStack portfolio={portfolio} />
     </>

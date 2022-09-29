@@ -19,8 +19,8 @@ const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
       bgColor={tileBgColor}
       px={2}
       py={4}
-      borderRadius="xl"
-      borderWidth={2}
+      borderRadius="3xl"
+      borderWidth="medium"
       boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
       textAlign="center"
     >

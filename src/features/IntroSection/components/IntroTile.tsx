@@ -1,4 +1,4 @@
-import { Box, chakra, Icon, useColorModeValue } from '@chakra-ui/react';
+import { Box, chakra, Flex, Icon, useColorModeValue } from '@chakra-ui/react';
 
 import { IntroTileProps } from '../types/introTile';
 
@@ -14,16 +14,18 @@ const IntroTile = ({ title, icon, desc }: IntroTileProps) => {
       px={2}
       py={4}
       bgColor={tileBgColor}
-      borderRadius="12px"
-      borderWidth="2px"
+      borderRadius="3xl"
+      borderWidth="medium"
       borderColor={tileBorderColor}
       boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
       textAlign="center"
     >
-      <Icon as={icon} color={tileColor} fontSize="4xl" />
-      <Box as="h3" fontWeight="bold" fontStyle="italic" py="8px">
-        {title}
-      </Box>
+      <Flex minWidth="max-content" justifyContent="center" alignItems="center" gap="2">
+        <Icon as={icon} color={tileColor} fontSize="3xl" />
+        <Box as="h3" fontWeight="bold" fontStyle="italic" py="2">
+          {title}
+        </Box>
+      </Flex>
       <Box as="p">{desc}</Box>
     </Box>
   );
