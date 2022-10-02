@@ -1,10 +1,15 @@
 import { Fade } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
 import { PageSeo } from '@/components/PageSeo';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Hero } from '@/features/HeroSection/';
 import { IntroStack } from '@/features/IntroSection/';
-import { TechStack } from '@/features/TechStackSection/';
+
+const TechStack = dynamic(() => import('../features/TechStackSection/components/TechStack'), {
+  suspense: true,
+});
 
 export function HomePage() {
   return (
@@ -14,7 +19,9 @@ export function HomePage() {
         <Hero />
         <IntroStack />
         <SectionTitle title="Tech Stack" />
-        <TechStack />
+        <Suspense fallback="Loading">
+          <TechStack />
+        </Suspense>
       </Fade>
     </>
   );

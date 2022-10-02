@@ -1,35 +1,20 @@
-import { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import type { NextComponentType, NextPageContext } from 'next';
+import type { NextRouter } from 'next/router';
 
 import '@/styles/global.css';
 
-import { ThemeProvider } from '@/contexts/ThemeProvider';
-
-import { PageContent } from '@/components/PageContent';
-import { Content, Footer, Header, MobileNav } from '@/features/Layout';
-
-function App({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    router.events.on('routeChangeStart', () => setIsLoading(true));
-    router.events.on('routeChangeComplete', () => setIsLoading(false));
-    router.events.on('routeChangeError', () => setIsLoading(false));
-  }, [router.events]);
-
+import { Layout } from '@/features/Layout';
+export interface AppRenderProps {
+  pageProps: object;
+  err?: Error;
+  Component: NextComponentType<NextPageContext, AppRenderProps, object>;
+  router: NextRouter;
+}
+function App({ Component, pageProps }: AppRenderProps) {
   return (
-    <ThemeProvider>
-      <Header />
-      <Content>
-        <PageContent isLoading={isLoading}>
-          <Component {...pageProps} />
-          <Footer />
-        </PageContent>
-      </Content>
-      <MobileNav />
-    </ThemeProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

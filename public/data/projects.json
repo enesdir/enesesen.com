@@ -1,8 +1,8 @@
 [
   {
-    "title": "CN-Blog",
+    "title": "Free Time Hunter Mobile Application",
     "description": "Example Serverless Blog App written with NextJS",
-    "technologies": ["TypeScript", "Expo", "React-Native", "GraphQL", "Firebase", "Framer-Motion"],
+    "technologies": ["TypeScript", "Expo", "React-Native", "React", "Firebase", "Framer-Motion", "i18n-js"],
     "projectDate": "2021",
     "projectDuration": "3 Months",
     "projectStatus": "InProgress",
@@ -10,9 +10,9 @@
     "imageUrl": ""
   },
   {
-    "title": "CN-Blog",
+    "title": "Booking System",
     "description": "Example Serverless Blog App written with NextJS",
-    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL"],
+    "technologies": ["TypeScript", "TailwindCSS", "REST", "Axios", "NextJS"],
     "projectDate": "2021",
     "projectDuration": "3 Months",
     "projectStatus": "Completed",
@@ -20,9 +20,9 @@
     "imageUrl": ""
   },
   {
-    "title": "CN-Market",
+    "title": "NFT Gaming Platform",
     "description": "Example Landing Page/Store Page Auth with Firebase",
-    "technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
+    "technologies": ["TypeScript", "Web3", "TailwindCSS", "NextJS"],
     "projectDate": "2021",
     "projectDuration": "3 Months",
     "projectStatus": "Completed",
@@ -30,9 +30,9 @@
     "imageUrl": ""
   },
   {
-    "title": "CN-MovieDB",
+    "title": "UI-Kit Library",
     "description": "Fetch External API Show React and Material-UI",
-    "technologies": ["TypeScript", "React"],
+    "technologies": ["TypeScript", "React", "StoryBook", "CSS3"],
     "projectDate": "2021",
     "projectDuration": "3 Months",
     "projectStatus": "Completed",
@@ -40,11 +40,11 @@
     "imageUrl": ""
   },
   {
-    "title": "To-do App",
+    "title": "Various Web Application",
     "description": "Todo Application with Svelte/Sapper",
-    "technologies": ["TypeScript", "Svelte", "Sapper"],
-    "projectDate": "2021",
-    "projectDuration": "3 Months",
+    "technologies": ["PHP", "nginx", "Wordpress", "ssh", "sftp"],
+    "projectDate": "2019",
+    "projectDuration": "12 Months",
     "projectStatus": "Completed",
     "url": "",
     "imageUrl": ""
