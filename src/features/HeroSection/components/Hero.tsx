@@ -40,13 +40,9 @@ export default function Hero() {
           </Box>
         </Heading>
       </Flex>
-
-      <Image
-        src="/images/futuristic.svg"
-        width="240px"
-        height="240px"
-        alt="Futuristic Software Developer Illustration"
-      />
+      <Box width="240px" height="240px" position="relative">
+        <Image src="/images/futuristic.svg" alt="Futuristic Software Developer Illustration" priority layout="fill" />
+      </Box>
     </Flex>
   );
 }

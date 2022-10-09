@@ -39,8 +39,7 @@ export function PageSeo(props: PageSeoProps) {
   return (
     <Head>
       <title>{meta.title}</title>
-      {/* Vercel Analytics */}
-      <meta httpEquiv="Content-Security-Policy" content="default-src * 'self' data: 'unsafe-inline' 'unsafe-eval' *" />
+
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />

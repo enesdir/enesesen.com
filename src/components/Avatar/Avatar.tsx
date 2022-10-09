@@ -9,12 +9,15 @@ export function Avatar(): JSX.Element {
         as={chakra.a}
         isRound
         bgColor="transparent"
+        width={10}
+        height={10}
+        position="relative"
         aria-label="Homepage navigation button"
         _hover={{ backgroundColor: 'transparent' }}
       >
         <Image
-          width={32}
-          height={32}
+          priority
+          layout="fill"
           alt="Enes ESEN profile image"
           src="/images/enes.jpg"
           style={{ borderRadius: '50%' }}

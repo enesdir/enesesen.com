@@ -2,9 +2,9 @@ import { AspectRatio, Text, useColorMode, VStack } from '@chakra-ui/react';
 
 import { Image } from '@/components/ImageNext/ImageNext';
 import { MotionBox } from '@/components/MotionBox/MotionBox';
+import { Technologies } from '@/components/Technologies/Technologies';
 
 import { CardHeader } from './CardHeader';
-import { TechnologiesNode } from './TechnologiesNode';
 import { PortfolioType } from '../types/PortfolioType';
 
 type PortfolioCardProps = {
@@ -49,7 +49,7 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
         <Text fontWeight="medium" noOfLines={1}>
           {portfolio.description}
         </Text>
-        <TechnologiesNode technologies={portfolio.technologies} />
+        <Technologies technologies={portfolio.technologies} />
       </VStack>
     </MotionBox>
   );
