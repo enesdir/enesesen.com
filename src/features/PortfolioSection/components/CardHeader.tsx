@@ -1,9 +1,8 @@
 import { Box, chakra, Flex, IconButton, Text, Tooltip } from '@chakra-ui/react';
-import Link from 'next/link';
 import { IoMdOpen } from 'react-icons/io';
 import { SiGit } from 'react-icons/si';
 
-import { PortfolioType } from '@/interfaces/PortfolioType';
+import { PortfolioType } from '../types/PortfolioType';
 
 type CardHeaderProps = {
   portfolio: Pick<PortfolioType, 'title' | 'url' | 'demoUrl'>;
@@ -17,26 +16,24 @@ export function CardHeader({ portfolio }: CardHeaderProps) {
       </Text>
       <Box>
         <Tooltip label="Open Repository Link" shouldWrapChildren>
-          <Link href={portfolio.url} passHref>
-            <IconButton
-              as={chakra.a}
-              target="_blank"
-              variant="link"
-              aria-label="Open Repository link"
-              icon={<SiGit size={30} />}
-            />
-          </Link>
+          <IconButton
+            as={chakra.a}
+            href={portfolio.url}
+            target="_blank"
+            variant="link"
+            aria-label="Open Repository link"
+            icon={<SiGit size={30} />}
+          />
         </Tooltip>
         <Tooltip label="Open Website" shouldWrapChildren>
-          <Link href={portfolio.demoUrl} passHref>
-            <IconButton
-              as={chakra.a}
-              target="_blank"
-              variant="link"
-              aria-label="Open website"
-              icon={<IoMdOpen size={30} />}
-            />
-          </Link>
+          <IconButton
+            as={chakra.a}
+            href={portfolio.demoUrl}
+            target="_blank"
+            variant="link"
+            aria-label="Open Live Demo"
+            icon={<IoMdOpen size={30} />}
+          />
         </Tooltip>
       </Box>
     </Flex>

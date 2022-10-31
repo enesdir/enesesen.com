@@ -2,6 +2,8 @@ import { chakra, IconButton } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import profilePic from '~/images/enes.jpg';
+
 export function Avatar(): JSX.Element {
   return (
     <Link href="/" passHref>
@@ -15,13 +17,7 @@ export function Avatar(): JSX.Element {
         aria-label="Homepage navigation button"
         _hover={{ backgroundColor: 'transparent' }}
       >
-        <Image
-          priority
-          layout="fill"
-          alt="Enes ESEN profile image"
-          src="/images/enes.jpg"
-          style={{ borderRadius: '50%' }}
-        />
+        <Image priority alt="Enes ESEN profile image" src={profilePic} style={{ borderRadius: '50%' }} />
       </IconButton>
     </Link>
   );

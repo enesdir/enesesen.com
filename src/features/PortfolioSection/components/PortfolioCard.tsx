@@ -1,6 +1,6 @@
 import { AspectRatio, Text, useColorMode, VStack } from '@chakra-ui/react';
+import Image from 'next/image';
 
-import { Image } from '@/components/ImageNext/ImageNext';
 import { MotionBox } from '@/components/MotionBox/MotionBox';
 import { Technologies } from '@/components/Technologies/Technologies';
 
@@ -42,7 +42,7 @@ export function PortfolioCard({ portfolio }: PortfolioCardProps) {
           display="block"
           mb="1em"
         >
-          <Image src={portfolio.imageUrl} alt={`${portfolio.name} image`} layout="fill" objectFit="fill" />
+          <Image src={portfolio.imageUrl} alt={`${portfolio.name} image`} fill />
         </AspectRatio>
       )}
       <VStack alignItems="stretch">

@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 import { MotionBox } from '@/components/MotionBox/MotionBox';
 
+import futuristicImage from '~/images/futuristic.svg';
+
 export default function Hero() {
   const color = useColorModeValue('primary.light', 'primary.dark');
   const animationKeyframes = keyframes`
@@ -41,7 +43,7 @@ export default function Hero() {
         </Heading>
       </Flex>
       <Box width="240px" height="240px" position="relative">
-        <Image src="/images/futuristic.svg" alt="Futuristic Software Developer Illustration" priority layout="fill" />
+        <Image src={futuristicImage} alt="Futuristic Software Developer Illustration" priority />
       </Box>
     </Flex>
   );

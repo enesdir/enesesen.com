@@ -11,7 +11,7 @@ type ProjectDateProps = {
 export function ProjectDate({ projectDate, projectDuration }: ProjectDateProps) {
   const iconColor = useColorModeValue('gray.600', 'gray.400');
   return (
-    <Flex h="full" direction={['row', 'column']} justify="space-between" letterSpacing={2}>
+    <Flex h="full" direction={['row', 'column']} justify="space-between" letterSpacing={1}>
       <Flex alignItems="center" direction={['column', 'row']} gap={2}>
         <Icon as={FaRegCalendarAlt} fontSize={['2xl', '3xl']} color={iconColor} />
 

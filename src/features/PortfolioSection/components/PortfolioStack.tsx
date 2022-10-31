@@ -1,13 +1,13 @@
 import { Box, Input, SimpleGrid, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React, { FormEvent, useState } from 'react';
-import { IoLogoGithub } from 'react-icons/io';
 
 import { NextButtonLink } from '@/components/NextButtonLink';
 import { PortfolioCard } from '@/features/PortfolioSection/components/PortfolioCard';
 
 import { PortfolioType } from '../types/PortfolioType';
 
+import noItems from '~/images/no-items.svg';
 type PortfolioProps = {
   portfolio: PortfolioType[];
 };
@@ -32,13 +32,7 @@ export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
     </Box>
   );
   const footerNode = () => (
-    <NextButtonLink
-      target="_blank"
-      size="lg"
-      variant="outline"
-      href="https://github.com/codenuru"
-      leftIcon={<IoLogoGithub />}
-    >
+    <NextButtonLink isExternal size="lg" variant="outline" href="https://github.com/codenuru">
       More on GitHub
     </NextButtonLink>
   );
@@ -46,7 +40,9 @@ export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
     if (!sortedPortfolio.length) {
       return (
         <VStack mx="auto" textAlign="center">
-          <Image src="/images/no-items.svg" alt="No projects found!" width="240px" height="240px" />
+          <Box width="240px" height="240px">
+            <Image src={noItems} alt="No projects found!" />
+          </Box>
           <Text>No projects found!</Text>
         </VStack>
       );

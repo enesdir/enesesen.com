@@ -1,24 +1,24 @@
 [
   {
-    "title": "CN-Blog",
-    "description": "Example Serverless Blog App written with NextJS",
-    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL"],
+    "title": "Blog Application",
+    "description": "Serverless Blog Application written with NextJS",
+    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL", "Apollo", "PostgreSQL", "NextJS", "MaterialUI"],
     "url": "https://github.com/codenuru/cn-blog",
     "demoUrl": "https://cn-blog-three.vercel.app",
     "imageUrl": "/portfolio/cn-blog.png"
   },
   {
-    "title": "CN-Market",
-    "description": "Example Landing Page/Store Page Auth with Firebase",
+    "title": "E-Commerce Application",
+    "description": "Landing Page/Store Page, Auth with Firebase",
     "technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
     "url": "https://github.com/codenuru/cn-market",
     "demoUrl": "https://cn-market.vercel.app",
     "imageUrl": "/portfolio/cn-market.gif"
   },
   {
-    "title": "CN-MovieDB",
-    "description": "Fetch External API Show React and Material-UI",
-    "technologies": ["TypeScript", "React"],
+    "title": "MovieDB",
+    "description": "Fetch External API Show data using React and Material-UI",
+    "technologies": ["TypeScript", "React", "NextJS", "Axios", "MaterialUI"],
     "url": "https://github.com/codenuru/cn-moviedb",
     "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app",
     "imageUrl": ""

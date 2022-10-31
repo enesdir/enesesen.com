@@ -1,4 +1,15 @@
-import { Box, chakra, Divider, Heading, Stack, StackDivider, Text, useColorModeValue, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  chakra,
+  Divider,
+  Flex,
+  Heading,
+  Stack,
+  StackDivider,
+  Text,
+  useColorModeValue,
+  VStack,
+} from '@chakra-ui/react';
 
 import { Technologies } from '@/components/Technologies/Technologies';
 
@@ -28,11 +39,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <>
           <Box flex={1}>
             {/* <Icon as={icon} color={tileColor} fontSize="3xl" /> */}
-
-            <Heading size={['xs', 'md']} fontWeight="bold">
-              {project.title}
-            </Heading>
-
+            <Flex justify="space-between">
+              <Heading size={['xs', 'sm']} fontWeight="bold">
+                {project.title}
+              </Heading>
+              <Heading size={['xs', 'sm']} fontWeight="thin" alignItems="right">
+                {project.position}
+              </Heading>
+            </Flex>
             <VStack alignItems="left">
               <Text>{project.description}</Text>
               <Divider borderColor="gray.500" />
