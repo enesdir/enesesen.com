@@ -1,5 +1,3 @@
-import { Suspense } from 'react';
-
 import { ThemeProvider } from '@/contexts/ThemeProvider';
 
 import type { TRenderProps } from '@/types/commonPropTypes';
@@ -12,14 +10,12 @@ import MobileNav from './MobileNav';
 const Layout = ({ children }: TRenderProps) => {
   return (
     <ThemeProvider>
-      <Suspense fallback="Loading...">
-        <Header />
-        <Content>
-          {children}
-          <Footer />
-        </Content>
-        <MobileNav />
-      </Suspense>
+      <Header />
+      <Content>
+        {children}
+        <Footer />
+      </Content>
+      <MobileNav />
     </ThemeProvider>
   );
 };

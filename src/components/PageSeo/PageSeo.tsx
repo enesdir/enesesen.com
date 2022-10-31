@@ -83,16 +83,16 @@ type Favicons = {
 
 const favicons: Array<Favicons> = [
   {
-    rel: 'icon',
+    rel: 'apple-touch-icon',
     type: 'image/png',
-    sizes: '32x32',
-    href: '/favicon/favicon-32x32.png',
+    sizes: '180x180',
+    href: '/favicon/apple-touch-icon.png',
   },
   {
     rel: 'icon',
     type: 'image/png',
-    sizes: '96x96',
-    href: '/favicon/favicon-96x96.png',
+    sizes: '32x32',
+    href: '/favicon/favicon-32x32.png',
   },
   {
     rel: 'icon',
@@ -106,6 +106,6 @@ const favicons: Array<Favicons> = [
   },
   {
     rel: 'manifest',
-    href: '/favicon/manifest.json',
+    href: '/favicon/site.webmanifest',
   },
 ];

@@ -9,7 +9,7 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
-    <ChakraProvider resetCSS colorModeManager={localStorageManager} theme={customTheme}>
+    <ChakraProvider colorModeManager={localStorageManager} theme={customTheme}>
       {children}
     </ChakraProvider>
   );
