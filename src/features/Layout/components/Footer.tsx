@@ -13,7 +13,7 @@ const Footer = () => {
             <Icon as={FaSignature} mr="8px" color="red.500" />
             <Box as="span" fontSize="sm">
               coded by
-              <Link href="https://github.com/codenuru/enesesen.com" isExternal pl="4px">
+              <Link href="https://github.com/enesdir/enesesen.com" isExternal pl="4px">
                 enes esen
               </Link>
             </Box>

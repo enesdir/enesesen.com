@@ -4,7 +4,7 @@ import { NextButtonLink } from '@/components/NextButtonLink';
 
 import type { navButtonType } from '../types/navButton';
 
-const NavButton = ({ text, href }: navButtonType) => {
+export const NavButton = ({ text, href }: navButtonType) => {
   const { asPath } = useRouter();
   const isLast = asPath === href;
 
@@ -23,5 +23,3 @@ const NavButton = ({ text, href }: navButtonType) => {
     </NextButtonLink>
   );
 };
-
-export default NavButton;

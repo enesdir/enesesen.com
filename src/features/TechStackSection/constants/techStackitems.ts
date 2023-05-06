@@ -9,8 +9,8 @@ import {
   SiGraphql,
   SiHtml5,
   SiJavascript,
-  SiMaterialui,
   SiMongodb,
+  SiMui,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
@@ -35,6 +35,7 @@ const techStackItems = [
       {
         icon: SiNextdotjs,
         iconName: 'Next.js',
+        iconColor: '#fff',
       },
       {
         icon: SiTypescript,
@@ -53,8 +54,9 @@ const techStackItems = [
         iconName: 'CSS 3',
       },
       {
-        icon: SiMaterialui,
+        icon: SiMui,
         iconName: 'Material-UI',
+        iconcolor: '#007FFF',
       },
       {
         icon: SiBulma,

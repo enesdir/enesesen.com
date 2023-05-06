@@ -5,9 +5,9 @@ import { Container } from '@/components/Container';
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 import routes from '@/features/Layout/constants/routes';
 
-import NavButton from './NavButton';
+import { NavButton } from './NavButton';
 
-const Header = () => {
+export const Header = () => {
   const desktopRoutes = routes?.filter((route) => route.isDesktop === true);
   return (
     <Flex
@@ -37,5 +37,3 @@ const Header = () => {
     </Flex>
   );
 };
-
-export default Header;

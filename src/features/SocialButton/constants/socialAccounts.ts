@@ -5,7 +5,7 @@ import type { socialAccountsType } from '../types/socialButton';
 const socialAccounts: socialAccountsType[] = [
   {
     text: 'Github',
-    href: 'https://github.com/codenuru',
+    href: 'https://github.com/enesdir',
     icon: FaGithub,
     ariaLabel: 'Github Profile Link Button',
   },

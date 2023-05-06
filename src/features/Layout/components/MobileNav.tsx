@@ -8,7 +8,7 @@ import { socialAccounts, SocialButton } from '@/features/SocialButton';
 
 import MobileNavItem from './MobileNavItem';
 
-const MobileNav = () => {
+export const MobileNav = () => {
   return (
     <Flex
       as="footer"
@@ -66,5 +66,3 @@ const MobileNav = () => {
     </Flex>
   );
 };
-
-export default MobileNav;
