@@ -1,7 +1,8 @@
-import { Fade } from '@chakra-ui/react';
+import { Fade, Stack } from '@chakra-ui/react';
 
 import { PageSeo } from '@/components/PageSeo';
 import { AboutSection } from '@/features/AboutSection';
+import { WidgetContainer } from '@/features/Calendly';
 import { ContactSection } from '@/features/ContactSection';
 
 function ContactPage() {
@@ -12,8 +13,13 @@ function ContactPage() {
         description="For more information about Enes Esen please feel free to reach out through the social media links or contact form."
       />
       <Fade in transition={{ enter: { duration: 1.2 } }}>
-        <AboutSection />
-        <ContactSection />
+        <Stack direction={['column', 'row']} spacing="1.5em">
+          <div>
+            <AboutSection />
+            <ContactSection />
+          </div>
+          <WidgetContainer />
+        </Stack>
       </Fade>
     </>
   );
