@@ -1,31 +1,26 @@
-import type { NextComponentType, NextPageContext } from 'next';
-import type { NextRouter } from 'next/router';
+/* eslint-disable react/jsx-props-no-spreading */
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 import '@/styles/global.css';
 
 import { ThemeProvider } from '@/contexts/ThemeProvider';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-import { Viewport } from '@/components/Viewport';
 import { Layout } from '@/features/Layout';
-export interface AppRenderProps {
-  pageProps: object;
-  err?: Error;
-  Component: NextComponentType<NextPageContext, AppRenderProps, object>;
-  router: NextRouter;
-}
-function App({ Component, pageProps }: AppRenderProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider cookies={pageProps.cookies}>
-      <ErrorBoundary>
-        <Viewport>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Viewport>
-      </ErrorBoundary>
+    <ThemeProvider>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+        />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
-export { getServerSideProps } from '@/contexts/ThemeProvider';
+
 export default App;

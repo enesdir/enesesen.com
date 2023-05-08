@@ -1,4 +1,4 @@
-import { chakra, IconButton } from '@chakra-ui/react';
+import { IconButton } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,9 +6,9 @@ import profilePic from '~/images/enes.jpg';
 
 export function Avatar(): JSX.Element {
   return (
-    <Link href="/" passHref>
+    <Link href="/" passHref legacyBehavior>
       <IconButton
-        as={chakra.a}
+        as="a"
         isRound
         bgColor="transparent"
         width={10}

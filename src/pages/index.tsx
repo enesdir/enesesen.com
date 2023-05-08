@@ -1,5 +1,3 @@
-import { Fade } from '@chakra-ui/react';
-
 import { PageSeo } from '@/components/PageSeo';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Hero } from '@/features/HeroSection/';
@@ -10,13 +8,10 @@ export function HomePage() {
   return (
     <>
       <PageSeo />
-      <Fade in transition={{ enter: { duration: 1.2 } }}>
-        <Hero />
-        <IntroStack />
-        <SectionTitle title="Tech Stack" />
-
-        <TechStack />
-      </Fade>
+      <Hero />
+      <IntroStack />
+      <SectionTitle title="Tech Stack" />
+      <TechStack />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList, useColorModeValue } from '@chakra-ui/react';
+import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 
 import { Avatar } from '@/components/Avatar/Avatar';
@@ -21,9 +21,13 @@ export const MobileNav = () => {
       right={0}
       left={0}
       m="16px"
-      bg={useColorModeValue('white', 'gray.800')}
+      _dark={{
+        bg: 'gray.800',
+        borderTopColor: 'gray.700',
+      }}
+      bg="white"
       borderWidth="2px"
-      borderTopColor={useColorModeValue('gray.100', 'gray.700')}
+      borderTopColor="gray.100"
       borderRadius="16px"
       zIndex="overlay"
       data-id="mobile-nav"

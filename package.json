@@ -30,14 +30,12 @@
   },
   "dependencies": {
     "@chakra-ui/react": "2.6.1",
-    "@chakra-ui/theme-tools": "^2.0.16",
-    "@emotion/react": "^11.10.8",
-    "@emotion/styled": "^11.10.8",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.12.8",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-error-boundary": "4.0.4",
     "react-icons": "4.8.0",
     "sharp": "0.32.1"
   },
@@ -45,12 +43,12 @@
     "@commitlint/cli": "17.6.3",
     "@commitlint/config-conventional": "17.6.3",
     "@next/bundle-analyzer": "^13.4.1",
-    "@types/node": "^18.16.4",
-    "@types/react": "^18.2.5",
-    "@types/react-dom": "^18.2.3",
+    "@types/node": "^18.16.5",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
@@ -63,7 +61,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
+      "eslint --fix --max-warnings=0",
       "prettier -w"
     ],
     "src/**/*.{json,css,scss,md}": [

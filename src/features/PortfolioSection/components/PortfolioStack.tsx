@@ -1,8 +1,7 @@
-import { Box, Input, SimpleGrid, Text, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Input, Link, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React, { FormEvent, useState } from 'react';
 
-import { NextButtonLink } from '@/components/NextButtonLink';
 import { PortfolioCard } from '@/features/PortfolioSection/components/PortfolioCard';
 
 import { PortfolioType } from '../types/PortfolioType';
@@ -13,8 +12,6 @@ type PortfolioProps = {
 };
 
 export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
-  const cardBgColor = useColorModeValue('white', 'gray.900');
-  const cardColor = useColorModeValue('gray.900', 'white');
   const [searchQuery, setSearchQuery] = useState('');
   const sortedPortfolio = portfolio.filter((work: PortfolioType) =>
     work.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -22,8 +19,9 @@ export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
   const searchNode = () => (
     <Box pt={4} w="full">
       <Input
-        bg={cardBgColor}
-        color={cardColor}
+        bg="white"
+        color="gray.900"
+        _dark={{ bg: 'gray.900', color: 'white' }}
         value={searchQuery}
         onChange={(e: FormEvent<HTMLInputElement>) => setSearchQuery(e.currentTarget.value)}
         placeholder="Search for an project"
@@ -32,9 +30,9 @@ export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
     </Box>
   );
   const footerNode = () => (
-    <NextButtonLink isExternal size="lg" variant="outline" href="https://github.com/codenuru">
+    <Link size="lg" variant="outline" target="_blank" href="https://github.com/enesdir">
       More on GitHub
-    </NextButtonLink>
+    </Link>
   );
   const projectsNode = () => {
     if (!sortedPortfolio.length) {

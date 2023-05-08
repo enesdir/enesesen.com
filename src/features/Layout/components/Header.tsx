@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import { Avatar } from '@/components/Avatar/Avatar';
 import { Container } from '@/components/Container';
@@ -15,11 +15,12 @@ export const Header = () => {
       alignItems="center"
       w="100%"
       h="64px"
-      bg={useColorModeValue('gray.50', 'gray.800')}
+      _dark={{ bg: 'gray.800', borderBottomColor: 'gray.700' }}
+      bg="gray.50"
       display={['none', 'flex']}
       pos="fixed"
       borderBottomWidth="2px"
-      borderBottomColor={useColorModeValue('gray.100', 'gray.700')}
+      borderBottomColor="gray.100"
       shadow="0 0 10px 0 rgba(0,0,0, 0.035);"
       zIndex="overlay"
     >

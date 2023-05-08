@@ -5,7 +5,7 @@ import Footer from './Footer';
 import { Header } from './Header';
 import { MobileNav } from './MobileNav';
 
-const Layout = ({ children }: TRenderProps) => {
+export const Layout = ({ children }: TRenderProps) => {
   return (
     <>
       <Header />
@@ -17,5 +17,3 @@ const Layout = ({ children }: TRenderProps) => {
     </>
   );
 };
-
-export default Layout;
