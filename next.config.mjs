@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/** @type {import('next').NextConfig} */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+import configureBundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = configureBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+/** @type {import('next').NextConfig} nextConfig */
 const nextConfig = {
   eslint: {
     dirs: ['src'],
@@ -26,4 +27,9 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+const configExport = () => {
+  const plugins = [withBundleAnalyzer];
+  return plugins.reduce((acc, next) => next(acc), nextConfig);
+};
+
+export default configExport;

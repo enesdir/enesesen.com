@@ -12,6 +12,10 @@
 /.next/
 /out/
 
+# cache
+.swc/
+.eslintcache
+
 # production
 /build
 
