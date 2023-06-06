@@ -7,6 +7,7 @@
 
 /** @type {import('prettier').Config} */
 module.exports = {
+  plugins: ['prettier-plugin-packagejson', 'prettier-plugin-jsdoc'],
   arrowParens: 'always',
   bracketSpacing: true,
   endOfLine: 'lf',

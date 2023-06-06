@@ -15,7 +15,6 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en" dir="ltr">
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
           <Meta />
         </Head>
         <body>
