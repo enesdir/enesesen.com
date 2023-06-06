@@ -1,6 +1,6 @@
 import type { IconType } from 'react-icons/lib';
 
-export type IntroTileProps = {
+export type IntroTileType = {
   title: string;
   icon: IconType;
   desc: string;

@@ -24,10 +24,12 @@ import {
   SiYarn,
 } from 'react-icons/si';
 
-const techStackItems = [
+import type { TechStackSection } from '../types/techStackSection';
+
+export const techStackItems: TechStackSection[] = [
   {
     title: 'Front-End',
-    stackSectionItems: [
+    stackItems: [
       {
         icon: SiReact,
         iconName: 'React',
@@ -56,7 +58,7 @@ const techStackItems = [
       {
         icon: SiMui,
         iconName: 'Material-UI',
-        iconcolor: '#007FFF',
+        iconColor: '#007FFF',
       },
       {
         icon: SiBulma,
@@ -74,7 +76,7 @@ const techStackItems = [
   },
   {
     title: 'Back-End',
-    stackSectionItems: [
+    stackItems: [
       {
         icon: SiNodedotjs,
         iconName: 'Node.js',
@@ -119,7 +121,7 @@ const techStackItems = [
   },
   {
     title: 'Tools',
-    stackSectionItems: [
+    stackItems: [
       {
         icon: SiGit,
         iconName: 'Git',
@@ -139,5 +141,3 @@ const techStackItems = [
     ],
   },
 ];
-
-export default techStackItems;

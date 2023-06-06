@@ -28,8 +28,8 @@ const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
         {title}
       </Heading>
       <SimpleGrid columns={3} gap={3}>
-        {stackitems.map((stackitem, index) => (
-          <TechStackIcon key={String(index)} icon={stackitem.icon} iconName={stackitem.iconName} />
+        {stackitems.map((stackItem, index) => (
+          <TechStackIcon key={String(index)} icon={stackItem.icon} iconName={stackItem.iconName} />
         ))}
       </SimpleGrid>
     </Box>

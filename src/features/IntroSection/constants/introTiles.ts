@@ -1,13 +1,8 @@
 import { FaCode, FaPencilAlt, FaUniversity } from 'react-icons/fa';
-import { IconType } from 'react-icons/lib';
 
-interface introTilesType {
-  title: string;
-  desc: string;
-  icon: IconType;
-}
+import { IntroTileType } from '../types/introTile';
 
-const introTiles: introTilesType[] = [
+const introTiles: IntroTileType[] = [
   {
     title: 'Coding',
     desc: 'I consider myself lucky that I get to wake up and do what I love every day. I see code as a form of art where you can start with a blank canvas and create anything that comes to mind.',

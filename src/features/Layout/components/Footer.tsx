@@ -4,7 +4,7 @@ import { FaSignature } from 'react-icons/fa';
 import { Container } from '@/components/Container';
 import { socialAccounts, SocialButton } from '@/features/SocialButton';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <Flex as="footer" my="16px" display={['none', 'flex']}>
       <Container>
@@ -34,4 +34,3 @@ const Footer = () => {
     </Flex>
   );
 };
-export default Footer;

@@ -1,5 +1,3 @@
-import SocialButton from './components/SocialButton';
-import socialAccounts from './constants/socialAccounts';
-import type { socialAccountsType } from './types/socialButton';
-
-export { socialAccounts, socialAccountsType, SocialButton };
+export { SocialButton } from './components/SocialButton';
+export { socialAccounts } from './constants/socialAccounts';
+export type { socialAccountsType } from './types/socialButton';

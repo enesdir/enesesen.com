@@ -1,8 +1,8 @@
 import { Box, chakra, Flex, Icon, useColorModeValue } from '@chakra-ui/react';
 
-import { IntroTileProps } from '../types/introTile';
+import { IntroTileType } from '../types/introTile';
 
-const IntroTile = ({ title, icon, desc }: IntroTileProps) => {
+const IntroTile = ({ title, icon, desc }: IntroTileType) => {
   const tileBorderColor = useColorModeValue('gray.100', 'gray.700');
   const tileColor = useColorModeValue('primary.light', 'primary.dark');
   const tileBgColor = useColorModeValue('white', 'gray.800');
