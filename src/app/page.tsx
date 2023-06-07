@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { WebsiteRoot } from '@/features/LandingPages'
 
 export const metadata: Metadata = {
-	title: 'Document Management for Modern Validation Teams',
+	title: 'Enes ESEN',
 }
 
 export default function WebsiteRootPage() {

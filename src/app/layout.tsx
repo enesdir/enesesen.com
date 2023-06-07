@@ -8,27 +8,34 @@ import { ThemeProvider } from '@/contexts/ThemeProvider'
 import { Layout } from '@/features/Layout'
 export const dynamic = 'force-dynamic'
 
-const title = 'Document Management for Modern Validation Teams'
+const title = 'Enes ESEN'
 const description =
-	'DocStore is an open-source document management tool for modern validation teams to create, track, and review documents.'
+	'Enes ESEN is a software developer eager to learn, share, and teach web development along with turning ideas into applications'
+const images = [
+	{
+		url: 'https://res.cloudinary.com/enesesen/image/upload/v1658665747/banners/enesesen-banner_zf1tct.png',
+	},
+]
 
 export const metadata: Metadata = {
 	title: {
-		template: '%s | DocStore',
-		default: 'Example Site',
+		template: '%s | Enes ESEN',
+		default: 'Enes ESEN',
 	},
 	description,
 	openGraph: {
 		type: 'website',
 		locale: 'en_IE',
-		url: 'https://docstore.vercel.app',
-		siteName: 'DocStore',
+		url: 'https://enesesen.com',
+		siteName: 'Enes Esen',
+		images,
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title,
 		description,
 		creator: '@codenuru',
+		images,
 	},
 	icons: {
 		icon: {
@@ -51,7 +58,7 @@ export const metadata: Metadata = {
 		{ media: '(prefers-color-scheme: dark)', color: 'black' },
 	],
 
-	metadataBase: new URL('https://docstore.io'),
+	metadataBase: new URL('https://enesesen.com'),
 }
 export default async function RootLayout({ children }: { children: ReactNode }) {
 	return (
