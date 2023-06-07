@@ -1,18 +1,18 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-import type { socialAccountsType } from '../types/socialButton';
+import type { socialAccountsType } from '../types/socialButton'
 
 export const socialAccounts: socialAccountsType[] = [
-  {
-    text: 'Github',
-    href: 'https://github.com/enesdir',
-    icon: FaGithub,
-    ariaLabel: 'Github Profile Link Button',
-  },
-  {
-    text: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/enesen/',
-    icon: FaLinkedin,
-    ariaLabel: 'LinkedIn Profile Link Button',
-  },
-];
+	{
+		text: 'Github',
+		href: 'https://github.com/enesdir',
+		icon: FaGithub,
+		ariaLabel: 'Github Profile Link Button',
+	},
+	{
+		text: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/enesen/',
+		icon: FaLinkedin,
+		ariaLabel: 'LinkedIn Profile Link Button',
+	},
+]

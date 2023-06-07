@@ -1,8 +1,8 @@
-import type { IconType } from 'react-icons/lib';
+import type { IconType } from 'react-icons/lib'
 
 export type TechStackIconType = {
-  icon: IconType;
-  iconName: string;
-  iconColor?: string;
-  size?: string;
-};
+	icon: IconType
+	iconName: string
+	iconColor?: string
+	size?: string
+}

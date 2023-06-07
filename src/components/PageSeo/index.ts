@@ -1,2 +1,2 @@
-export { Meta } from './Meta';
-export { PageSeo } from './PageSeo';
+export { Meta } from './Meta'
+export { PageSeo } from './PageSeo'

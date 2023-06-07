@@ -1,3 +1,3 @@
-import TechStack from './components/TechStack';
+import TechStack from './components/TechStack'
 
-export { TechStack };
+export { TechStack }

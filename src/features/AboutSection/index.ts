@@ -1,3 +1,3 @@
-import { AboutSection } from '@/features/AboutSection/components/AboutSection';
+import { AboutSection } from '@/features/AboutSection/components/AboutSection'
 
-export { AboutSection };
+export { AboutSection }

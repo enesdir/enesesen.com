@@ -1,34 +1,43 @@
 [
-  {
-    "title": "Blog Application",
-    "description": "Serverless Blog Application written with NextJS",
-    "technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL", "Apollo", "PostgreSQL", "NextJS", "MaterialUI"],
-    "url": "https://github.com/enesdir/cn-blog",
-    "demoUrl": "https://cn-blog-three.vercel.app",
-    "imageUrl": "/portfolio/cn-blog.png"
-  },
-  {
-    "title": "E-Commerce Application",
-    "description": "Landing Page/Store Page, Auth with Firebase",
-    "technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
-    "url": "https://github.com/enesdir/cn-market",
-    "demoUrl": "https://cn-market.vercel.app",
-    "imageUrl": "/portfolio/cn-market.gif"
-  },
-  {
-    "title": "MovieDB",
-    "description": "Fetch External API Show data using React and Material-UI",
-    "technologies": ["TypeScript", "React", "NextJS", "Axios", "MaterialUI"],
-    "url": "https://github.com/enesdir/cn-moviedb",
-    "demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app",
-    "imageUrl": ""
-  },
-  {
-    "title": "To-do App",
-    "description": "Todo Application with Svelte/Sapper",
-    "technologies": ["TypeScript", "Svelte", "Sapper"],
-    "url": "https://github.com/enesdir/svelte-todo",
-    "demoUrl": "https://sveltesapper-todo.netlify.app",
-    "imageUrl": ""
-  }
+	{
+		"title": "Blog Application",
+		"description": "Serverless Blog Application written with NextJS",
+		"technologies": [
+			"TypeScript",
+			"Prisma",
+			"Nexus",
+			"GraphQL",
+			"Apollo",
+			"PostgreSQL",
+			"NextJS",
+			"MaterialUI"
+		],
+		"url": "https://github.com/enesdir/cn-blog",
+		"demoUrl": "https://cn-blog-three.vercel.app",
+		"imageUrl": "/portfolio/cn-blog.png"
+	},
+	{
+		"title": "E-Commerce Application",
+		"description": "Landing Page/Store Page, Auth with Firebase",
+		"technologies": ["TypeScript", "Firebase", "ChakraUI", "NextJS"],
+		"url": "https://github.com/enesdir/cn-market",
+		"demoUrl": "https://cn-market.vercel.app",
+		"imageUrl": "/portfolio/cn-market.gif"
+	},
+	{
+		"title": "MovieDB",
+		"description": "Fetch External API Show data using React and Material-UI",
+		"technologies": ["TypeScript", "React", "NextJS", "Axios", "MaterialUI"],
+		"url": "https://github.com/enesdir/cn-moviedb",
+		"demoUrl": "https://cn-moviedb-git-main-enesen.vercel.app",
+		"imageUrl": ""
+	},
+	{
+		"title": "To-do App",
+		"description": "Todo Application with Svelte/Sapper",
+		"technologies": ["TypeScript", "Svelte", "Sapper"],
+		"url": "https://github.com/enesdir/svelte-todo",
+		"demoUrl": "https://sveltesapper-todo.netlify.app",
+		"imageUrl": ""
+	}
 ]

@@ -1,72 +1,73 @@
-import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList } from '@chakra-ui/react';
-import { FiMenu } from 'react-icons/fi';
+'use client'
+import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList } from '@chakra-ui/react'
+import { FiMenu } from 'react-icons/fi'
 
-import { Avatar } from '@/components/Avatar/Avatar';
-import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
-import routes from '@/features/Layout/constants/routes';
-import { socialAccounts, SocialButton } from '@/features/SocialButton';
+import { Avatar } from '@/components/Avatar/Avatar'
+import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
+import routes from '@/features/Layout/constants/routes'
+import { socialAccounts, SocialButton } from '@/features/SocialButton'
 
-import MobileNavItem from './MobileNavItem';
+import { MobileNavItem } from './MobileNavItem'
 
 export const MobileNav = () => {
-  return (
-    <Flex
-      as="footer"
-      display={['flex', 'none']}
-      w="calc(100% - 32px)"
-      h="64px"
-      basis="auto"
-      pos="fixed"
-      bottom={0}
-      right={0}
-      left={0}
-      m="16px"
-      _dark={{
-        bg: 'gray.800',
-        borderTopColor: 'gray.700',
-      }}
-      bg="white"
-      borderWidth="2px"
-      borderTopColor="gray.100"
-      borderRadius="16px"
-      zIndex="overlay"
-      data-id="mobile-nav"
-    >
-      <Flex align="center" justify="center" w="33%">
-        <ThemeToggle />
-      </Flex>
-      <Flex align="center" justify="center" w="33%">
-        <Avatar />
-      </Flex>
-      <Flex as="nav" align="center" justify="center" w="33%">
-        <Menu placement="auto">
-          <MenuButton
-            as={IconButton}
-            icon={<FiMenu />}
-            variant="ghost"
-            size="lg"
-            isRound
-            aria-label="Mobile Navigation Menu"
-          />
-          <MenuList>
-            <Flex justify="space-between" mx="2">
-              {socialAccounts.map((socialAccount, index) => (
-                <SocialButton
-                  key={String(index)}
-                  text={socialAccount.text}
-                  icon={socialAccount.icon}
-                  ariaLabel={socialAccount.ariaLabel}
-                  href={socialAccount.href}
-                />
-              ))}
-            </Flex>
-            <MenuDivider />
-            {routes.map((route, index) => (
-              <MobileNavItem key={String(index)} text={route.text} href={route.href} icon={route.icon} />
-            ))}
-          </MenuList>
-        </Menu>
-      </Flex>
-    </Flex>
-  );
-};
+	return (
+		<Flex
+			as='footer'
+			display={['flex', 'none']}
+			w='calc(100% - 32px)'
+			h='64px'
+			basis='auto'
+			pos='fixed'
+			bottom={0}
+			right={0}
+			left={0}
+			m='16px'
+			_dark={{
+				bg: 'gray.800',
+				borderTopColor: 'gray.700',
+			}}
+			bg='white'
+			borderWidth='2px'
+			borderTopColor='gray.100'
+			borderRadius='16px'
+			zIndex='overlay'
+			data-id='mobile-nav'
+		>
+			<Flex align='center' justify='center' w='33%'>
+				<ThemeToggle />
+			</Flex>
+			<Flex align='center' justify='center' w='33%'>
+				<Avatar />
+			</Flex>
+			<Flex as='nav' align='center' justify='center' w='33%'>
+				<Menu placement='auto'>
+					<MenuButton
+						as={IconButton}
+						icon={<FiMenu />}
+						variant='ghost'
+						size='lg'
+						isRound
+						aria-label='Mobile Navigation Menu'
+					/>
+					<MenuList>
+						<Flex justify='space-between' mx='2'>
+							{socialAccounts.map((socialAccount, index) => (
+								<SocialButton
+									key={String(index)}
+									text={socialAccount.text}
+									icon={socialAccount.icon}
+									ariaLabel={socialAccount.ariaLabel}
+									href={socialAccount.href}
+								/>
+							))}
+						</Flex>
+						<MenuDivider />
+						{routes.map((route, index) => (
+							<MobileNavItem key={String(index)} text={route.text} href={route.href} icon={route.icon} />
+						))}
+					</MenuList>
+				</Menu>
+			</Flex>
+		</Flex>
+	)
+}

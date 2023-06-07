@@ -1,23 +1,22 @@
-import { Icon, MenuItem, useColorModeValue } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { useRouter } from 'next/router';
+import { Icon, MenuItem, useColorModeValue } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { usePathname } from 'next/navigation'
 
-import type { mobileRoutesType } from '../types/mobileRoutes';
+import type { mobileRoutesType } from '../types/mobileRoutes'
 
-const MobileNavItem = ({ icon, href, text }: mobileRoutesType) => {
-  const primaryColor = useColorModeValue('primary.light', 'primary.dark');
-  const { asPath } = useRouter();
-  const isCurrentRoute = asPath === href;
-  return (
-    <MenuItem
-      as={NextLink}
-      href={href}
-      icon={<Icon as={icon} />}
-      color={isCurrentRoute ? primaryColor : 'default'}
-      aria-label={`${text} Link Button`}
-    >
-      {text}
-    </MenuItem>
-  );
-};
-export default MobileNavItem;
+export const MobileNavItem = ({ icon, href, text }: mobileRoutesType) => {
+	const primaryColor = useColorModeValue('primary.light', 'primary.dark')
+	const pathname = usePathname()
+	const isCurrentRoute = pathname === href
+	return (
+		<MenuItem
+			as={NextLink}
+			href={href}
+			icon={<Icon as={icon} />}
+			color={isCurrentRoute ? primaryColor : 'default'}
+			aria-label={`${text} Link Button`}
+		>
+			{text}
+		</MenuItem>
+	)
+}

@@ -1,19 +1,21 @@
-import type { PropsWithChildren } from 'react';
+'use client'
 
-import { Content } from './Content';
-import { Footer } from './Footer';
-import { Header } from './Header';
-import { MobileNav } from './MobileNav';
+import type { PropsWithChildren } from 'react'
+
+import { Content } from './Content'
+import { Footer } from './Footer'
+import { Header } from './Header'
+import { MobileNav } from './MobileNav'
 
 export const Layout = ({ children }: PropsWithChildren) => {
-  return (
-    <>
-      <Header />
-      <Content>
-        {children}
-        <Footer />
-      </Content>
-      <MobileNav />
-    </>
-  );
-};
+	return (
+		<>
+			<Header />
+			<Content>
+				{children}
+				<Footer />
+			</Content>
+			<MobileNav />
+		</>
+	)
+}

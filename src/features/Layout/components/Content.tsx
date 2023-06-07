@@ -1,12 +1,14 @@
-import { Box } from '@chakra-ui/react';
-import type { PropsWithChildren } from 'react';
+'use client'
 
-import { Container } from '@/components/Container';
+import { Box } from '@chakra-ui/react'
+import type { PropsWithChildren } from 'react'
+
+import { Container } from '@/components/Container'
 
 export const Content = ({ children }: PropsWithChildren) => {
-  return (
-    <Box as="main" pt={['0', '72px']} pb={['80px', '0']}>
-      <Container>{children}</Container>
-    </Box>
-  );
-};
+	return (
+		<Box as='main' pt={['0', '72px']} pb={['80px', '0']}>
+			<Container>{children}</Container>
+		</Box>
+	)
+}

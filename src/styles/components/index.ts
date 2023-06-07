@@ -1,5 +1,5 @@
-import { Link } from './link';
+import { Link } from './link'
 
 export const components = {
-  Link,
-};
+	Link,
+}

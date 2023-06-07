@@ -1,6 +1,6 @@
-import type { TechStackIconType } from './techStackIconItem';
+import type { TechStackIconType } from './techStackIconItem'
 
 export type TechStackSection = {
-  title: string;
-  stackItems: TechStackIconType[];
-};
+	title: string
+	stackItems: TechStackIconType[]
+}
