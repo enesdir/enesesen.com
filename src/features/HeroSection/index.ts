@@ -1,3 +1,1 @@
-import Hero from './components/Hero'
-
-export { Hero }
+export { Hero } from './components/Hero'

@@ -2,9 +2,9 @@ import { usePathname } from 'next/navigation'
 
 import { NextButtonLink } from '@/components/NextButtonLink'
 
-import type { navButtonType } from '../types/navButton'
+import type { RoutesType } from '../types/RoutesType'
 
-export const NavButton = ({ text, href }: navButtonType) => {
+export const NavButton = ({ text, href }: RoutesType) => {
 	const pathname = usePathname()
 	const isLast = pathname === href
 

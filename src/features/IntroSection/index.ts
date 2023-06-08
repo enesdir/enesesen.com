@@ -1,3 +1,1 @@
-import IntroStack from './components/IntroStack'
-
-export { IntroStack }
+export { IntroStack } from './components/IntroStack'

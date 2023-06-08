@@ -5,7 +5,7 @@ import { Hero } from '@/features/HeroSection/'
 import { IntroStack } from '@/features/IntroSection/'
 import { TechStack } from '@/features/TechStackSection/'
 
-export function WebsiteRoot() {
+export const WebsiteRoot = () => {
 	return (
 		<>
 			<Hero />

@@ -1,9 +1,9 @@
 import { SimpleGrid } from '@chakra-ui/react'
 
-import TechStackSection from './TechStackSection'
+import { TechStackSection } from './TechStackSection'
 import { techStackItems } from '../constants/techStackitems'
 
-const TechStack = () => {
+export const TechStack = () => {
 	return (
 		<SimpleGrid columns={[1, 2]} spacing={6}>
 			{techStackItems.map((techStackItem, index) => (
@@ -17,4 +17,3 @@ const TechStack = () => {
 		</SimpleGrid>
 	)
 }
-export default TechStack

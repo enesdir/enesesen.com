@@ -8,7 +8,7 @@ type CardHeaderProps = {
 	portfolio: Pick<PortfolioType, 'title' | 'url' | 'demoUrl'>
 }
 
-export function CardHeader({ portfolio }: CardHeaderProps) {
+export const CardHeader = ({ portfolio }: CardHeaderProps) => {
 	return (
 		<Flex justifyContent='space-between' mb={2}>
 			<Text color='slate.lighter' fontSize='xl' fontWeight='bold'>

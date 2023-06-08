@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Figtree } from 'next/font/google'
 import type { ReactNode } from 'react'
 
 import '@/styles/global.css'
@@ -6,6 +7,14 @@ import '@/styles/global.css'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 
 import { Layout } from '@/features/Layout'
+
+export const figTree = Figtree({
+	weight: ['400', '700'],
+	subsets: ['latin'],
+	variable: '--font-figtree',
+	fallback: ['system-ui', 'sans-serif'],
+})
+
 export const dynamic = 'force-dynamic'
 
 const title = 'Enes ESEN'
@@ -54,8 +63,8 @@ export const metadata: Metadata = {
 	},
 	manifest: '/favicon/site.webmanifest',
 	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: 'cyan' },
-		{ media: '(prefers-color-scheme: dark)', color: 'black' },
+		{ media: '(prefers-color-scheme: light)', color: '#F7FAFC' },
+		{ media: '(prefers-color-scheme: dark)', color: '#171923' },
 	],
 
 	metadataBase: new URL('https://enesesen.com'),

@@ -11,7 +11,7 @@ type PortfolioCardProps = {
 	portfolio: PortfolioType
 }
 
-export function PortfolioCard({ portfolio }: PortfolioCardProps) {
+export const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
 	const { colorMode } = useColorMode()
 	const cardBgColor = { light: 'white', dark: 'gray.900' }
 	const cardColor = { light: 'gray.900', dark: 'white' }

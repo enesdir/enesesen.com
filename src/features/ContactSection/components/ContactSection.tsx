@@ -3,7 +3,7 @@ import { SectionTitle } from '@/components/SectionTitle'
 import { Form } from './Form'
 import { OtherContactMethods } from './Other'
 
-function ContactSection() {
+export const ContactSection = () => {
 	return (
 		<>
 			<SectionTitle title='Get In Touch' />
@@ -12,5 +12,3 @@ function ContactSection() {
 		</>
 	)
 }
-
-export default ContactSection

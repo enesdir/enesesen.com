@@ -1,9 +1,9 @@
 import { FaCode, FaHome, FaUser } from 'react-icons/fa'
 import { MdTimeline } from 'react-icons/md'
 
-import type { mobileRoutesType } from '../types/mobileRoutes'
+import type { MobileRoutesType } from '../types/MobileRoutesType'
 
-const routes: mobileRoutesType[] = [
+const routes: MobileRoutesType[] = [
 	{
 		text: 'Home',
 		href: '/',

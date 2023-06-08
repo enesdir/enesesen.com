@@ -1,16 +1,14 @@
 import { Box, chakra, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 
-import type { TRenderProps } from '@/types/commonPropTypes'
-
-import TechStackIcon from './TechStackIcon'
+import { TechStackIcon } from './TechStackIcon'
 import type { TechStackIconType } from '../types/techStackIconItem'
 
-type TechStackSectionProps = TRenderProps & {
+type TechStackSectionProps = {
 	title: string
 	stackitems: TechStackIconType[]
 }
 
-const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
+export const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
 	const tileBgColor = useColorModeValue('white', 'gray.800')
 	return (
 		<Box
@@ -35,5 +33,3 @@ const TechStackSection = ({ title, stackitems }: TechStackSectionProps) => {
 		</Box>
 	)
 }
-
-export default TechStackSection

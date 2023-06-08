@@ -1,4 +1,4 @@
-export type routesType = {
+export type RoutesType = {
 	text: string
 	href: string
 	isExternal?: boolean

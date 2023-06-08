@@ -11,7 +11,7 @@ type PortfolioProps = {
 	portfolio: PortfolioType[]
 }
 
-export function PortfolioStack({ portfolio = [] }: PortfolioProps) {
+export const PortfolioStack = ({ portfolio = [] }: PortfolioProps) => {
 	const [searchQuery, setSearchQuery] = useState('')
 	const sortedPortfolio = portfolio.filter((work: PortfolioType) =>
 		work.title.toLowerCase().includes(searchQuery.toLowerCase())

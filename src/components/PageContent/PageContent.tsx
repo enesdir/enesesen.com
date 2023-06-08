@@ -1,10 +1,8 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 import { Container, Flex, Spinner } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { type PropsWithChildren, useEffect, useState } from 'react'
 
-import type { TRenderProps } from '@/types/commonPropTypes'
-
-type PageContentProps = TRenderProps & {
+type PageContentProps = PropsWithChildren & {
 	isLoading: boolean
 }
 

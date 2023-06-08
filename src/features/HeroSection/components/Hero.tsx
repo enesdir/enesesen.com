@@ -5,7 +5,7 @@ import { MotionBox } from '@/components/MotionBox/MotionBox'
 
 import futuristicImage from '~/images/futuristic.svg'
 
-export default function Hero() {
+export const Hero = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 	const animationKeyframes = keyframes`
   0%  { top: 2px; }

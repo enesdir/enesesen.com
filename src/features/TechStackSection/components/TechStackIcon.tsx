@@ -2,7 +2,7 @@ import { Box, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 
 import type { TechStackIconType } from '../types/techStackIconItem'
 
-const TechStackIcon = ({ size, icon, iconName }: TechStackIconType) => {
+export const TechStackIcon = ({ size, icon, iconName }: TechStackIconType) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 	const iconSize = size || '2em'
 	return (
@@ -18,5 +18,3 @@ const TechStackIcon = ({ size, icon, iconName }: TechStackIconType) => {
 		</Box>
 	)
 }
-
-export default TechStackIcon

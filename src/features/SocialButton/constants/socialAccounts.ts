@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-import type { socialAccountsType } from '../types/socialButton'
+import type { SocialAccountsType } from '../types/SocialButtonType'
 
-export const socialAccounts: socialAccountsType[] = [
+export const socialAccounts: SocialAccountsType[] = [
 	{
 		text: 'Github',
 		href: 'https://github.com/enesdir',

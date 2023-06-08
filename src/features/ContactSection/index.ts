@@ -1,4 +1,2 @@
-import ContactSection from '@/features/ContactSection/components'
-import ContactSuccess from '@/features/ContactSection/components/Success'
-
-export { ContactSection, ContactSuccess }
+export { ContactSection } from './components/ContactSection'
+export { ContactSuccess } from './components/Success'

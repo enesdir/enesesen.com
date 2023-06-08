@@ -4,7 +4,7 @@ import { FaHome } from 'react-icons/fa'
 
 import { Container } from '@/components/Container'
 
-function ContactSuccess() {
+export const ContactSuccess = () => {
 	return (
 		<Container>
 			<Box textAlign='center'>
@@ -28,5 +28,3 @@ function ContactSuccess() {
 		</Container>
 	)
 }
-
-export default ContactSuccess
