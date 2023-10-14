@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import { Figtree } from 'next/font/google'
 import type { ReactNode } from 'react'
 
-import '@/styles/global.css'
-
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 
 import { Layout } from '@/features/Layout'
