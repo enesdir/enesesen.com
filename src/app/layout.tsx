@@ -1,10 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Figtree } from 'next/font/google'
 import type { ReactNode } from 'react'
 
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 
 import { Layout } from '@/features/Layout'
+
+import { DEFAULT_SEO } from './constants'
 
 export const figTree = Figtree({
 	weight: ['400', '700'],
@@ -15,34 +17,34 @@ export const figTree = Figtree({
 
 export const dynamic = 'force-dynamic'
 
-const title = 'Enes ESEN'
-const description =
-	'Enes ESEN is a software developer eager to learn, share, and teach web development along with turning ideas into applications'
-const images = [
-	{
-		url: 'https://res.cloudinary.com/enesesen/image/upload/v1658665747/banners/enesesen-banner_zf1tct.png',
-	},
-]
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: '#F7FAFC' },
+		{ media: '(prefers-color-scheme: dark)', color: '#171923' },
+	],
+}
 
 export const metadata: Metadata = {
 	title: {
-		template: '%s | Enes ESEN',
-		default: 'Enes ESEN',
+		template: `%s | ${DEFAULT_SEO.title}`,
+		default: DEFAULT_SEO.title,
 	},
-	description,
+	description: DEFAULT_SEO.description,
 	openGraph: {
 		type: 'website',
 		locale: 'en_IE',
 		url: 'https://enesesen.com',
 		siteName: 'Enes Esen',
-		images,
+		images: DEFAULT_SEO.images,
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title,
-		description,
+		title: DEFAULT_SEO.title,
+		description: DEFAULT_SEO.description,
 		creator: '@codenuru',
-		images,
+		images: DEFAULT_SEO.images,
 	},
 	icons: {
 		icon: {
@@ -60,11 +62,6 @@ export const metadata: Metadata = {
 		],
 	},
 	manifest: '/favicon/site.webmanifest',
-	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: '#F7FAFC' },
-		{ media: '(prefers-color-scheme: dark)', color: '#171923' },
-	],
-
 	metadataBase: new URL('https://enesesen.com'),
 }
 export default async function RootLayout({ children }: { children: ReactNode }) {

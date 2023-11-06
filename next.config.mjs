@@ -99,7 +99,6 @@ const nextConfig = {
 			},
 		],
 		deviceSizes: [320, 480, 640, 750, 828, 960, 1080, 1200, 1440, 1920, 2048, 2560, 3840],
-		domains: ['res.cloudinary.com'],
 		contentDispositionType: 'attachment',
 		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
 	},
@@ -108,7 +107,6 @@ const nextConfig = {
 	poweredByHeader: false,
 	experimental: {
 		typedRoutes: true,
-		serverActions: true,
 		outputFileTracingExcludes: {
 			'/*': ['./public/favicon/**/*.png'],
 			'/**/*': ['./public/favicon/**/*.png'],
