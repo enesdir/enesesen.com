@@ -1,11 +1,16 @@
 {
+	"id": "com.enesesen.myapp",
 	"name": "enesesen.com",
 	"short_name": "EnesESEN",
-	"start_url": ".",
 	"description": "Personal Web App.",
 	"lang": "en-US",
-	"orientation": "landscape",
+	"dir": "ltr",
+	"start_url": "/",
 	"scope": "/",
+	"display": "standalone",
+	"orientation": "landscape",
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
 	"prefer_related_applications": false,
 	"icons": [
 		{
@@ -31,13 +36,10 @@
 			"purpose": "any"
 		},
 		{
-			"src": "/favicon/maskable_icon-x192.png",
+			"src": "/favicon/maskable_icon_x192.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "maskable"
 		}
-	],
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone"
+	]
 }

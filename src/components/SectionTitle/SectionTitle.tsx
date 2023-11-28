@@ -1,4 +1,5 @@
 import { Flex, Heading } from '@chakra-ui/react'
+
 import type { FC } from 'react'
 
 type SectionTitleProps = {

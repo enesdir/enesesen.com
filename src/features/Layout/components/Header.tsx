@@ -1,11 +1,11 @@
 'use client'
+
 import { Flex } from '@chakra-ui/react'
 
 import { Avatar } from '@/components/Avatar/Avatar'
 import { Container } from '@/components/Container'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
 import routes from '@/features/Layout/constants/routes'
-
 import { NavButton } from './NavButton'
 
 export const Header = () => {

@@ -1,8 +1,8 @@
 import { Icon, Link, Tooltip, useColorModeValue } from '@chakra-ui/react'
 
-import type { socialAccountsType } from '../types/SocialButtonType'
+import type { SocialAccountsType } from '../types/SocialButtonType'
 
-export const SocialButton = ({ text, icon, href, ariaLabel }: socialAccountsType) => {
+export const SocialButton = ({ text, icon, href, ariaLabel }: SocialAccountsType) => {
 	const color = useColorModeValue('primary.light', 'primary.dark')
 
 	return (

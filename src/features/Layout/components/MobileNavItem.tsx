@@ -1,6 +1,6 @@
-import { Icon, MenuItem, useColorModeValue } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Icon, MenuItem, useColorModeValue } from '@chakra-ui/react'
 
 import type { MobileRoutesType } from '../types/MobileRoutesType'
 
@@ -11,6 +11,7 @@ export const MobileNavItem = ({ icon, href, text }: MobileRoutesType) => {
 	return (
 		<MenuItem
 			as={NextLink}
+			// @ts-expect-error:todo
 			href={href}
 			icon={<Icon as={icon} />}
 			color={isCurrentRoute ? primaryColor : 'default'}

@@ -1,10 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-import { useRouter } from 'next/navigation'
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
-
-import type { FormFields } from '@/features/ContactSection/types/contactFormFields'
+import { useRouter } from 'next/navigation'
 
 import { env } from '@/env.mjs'
+
+import type { FormFields } from '@/features/ContactSection/types/contactFormFields'
 
 const FORMSPREE_URL = env.NEXT_PUBLIC_FORMSPREE_URL
 

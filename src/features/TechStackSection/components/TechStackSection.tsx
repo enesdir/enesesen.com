@@ -1,6 +1,7 @@
 import { Box, chakra, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 
 import { TechStackIcon } from './TechStackIcon'
+
 import type { TechStackIconType } from '../types/techStackIconItem'
 
 type TechStackSectionProps = {

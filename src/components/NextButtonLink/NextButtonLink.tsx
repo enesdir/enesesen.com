@@ -1,7 +1,7 @@
-import { Button, ButtonProps } from '@chakra-ui/react'
+import { PropsWithChildren } from 'react'
 import { LinkProps as NextLinkProps } from 'next/dist/client/link'
 import NextLink from 'next/link'
-import { PropsWithChildren } from 'react'
+import { Button, ButtonProps } from '@chakra-ui/react'
 
 export type NextButtonLinkProps = PropsWithChildren<NextLinkProps & Omit<ButtonProps, 'as'>>
 
@@ -19,6 +19,7 @@ export function NextButtonLink({
 	return (
 		<NextLink
 			passHref={true}
+			// @ts-expect-error: todo
 			href={href}
 			as={as}
 			replace={replace}

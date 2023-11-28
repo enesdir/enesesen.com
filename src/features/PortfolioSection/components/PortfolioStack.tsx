@@ -1,12 +1,11 @@
-import { Box, Input, Link, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { FormEvent, useState } from 'react'
 import Image from 'next/image'
-import React, { FormEvent, useState } from 'react'
+import { Box, Input, Link, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 
 import { PortfolioCard } from '@/features/PortfolioSection/components/PortfolioCard'
-
 import { PortfolioType } from '../types/PortfolioType'
+import noItems from '~/public/images/no-items.svg'
 
-import noItems from '~/images/no-items.svg'
 type PortfolioProps = {
 	portfolio: PortfolioType[]
 }

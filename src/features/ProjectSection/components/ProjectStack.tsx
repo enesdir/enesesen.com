@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
 
 import { SectionTitle } from '@/components/SectionTitle'
-
 import { Projects } from './Projects'
+
 import type { ProjectType } from '../types/ProjectType'
 
 type ProjectStackProps = {

@@ -1,4 +1,5 @@
 'use client'
+
 import { Flex, IconButton, Menu, MenuButton, MenuDivider, MenuList } from '@chakra-ui/react'
 import { FiMenu } from 'react-icons/fi'
 
@@ -6,7 +7,6 @@ import { Avatar } from '@/components/Avatar/Avatar'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
 import routes from '@/features/Layout/constants/routes'
 import { socialAccounts, SocialButton } from '@/features/SocialButton'
-
 import { MobileNavItem } from './MobileNavItem'
 
 export const MobileNav = () => {

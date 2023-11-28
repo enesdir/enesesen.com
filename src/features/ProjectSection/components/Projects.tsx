@@ -1,6 +1,7 @@
 import { Box, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
 import { ProjectCard } from './ProjectCard'
+
 import type { ProjectType } from '../types/ProjectType'
 
 type ProjectsProps = {

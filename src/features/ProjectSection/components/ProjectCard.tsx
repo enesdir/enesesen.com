@@ -1,9 +1,10 @@
 import { Box, chakra, Divider, Flex, Heading, Stack, StackDivider, Text, VStack } from '@chakra-ui/react'
 
 import { Technologies } from '@/components/Technologies/Technologies'
-
 import { ProjectDate } from './ProjectDate'
+
 import type { ProjectType } from '../types/ProjectType'
+
 type ProjectCardProps = {
 	project: ProjectType
 }
@@ -21,10 +22,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 			borderColor='gray.100'
 			boxShadow='0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);'
 		>
-			<Stack
-				direction={['column', 'row']}
-				divider={<StackDivider borderColor='gray.500' borderStyle='dashed' />}
-			>
+			<Stack direction={['column', 'row']} divider={<StackDivider borderColor='gray.500' borderStyle='dashed' />}>
 				<>
 					<Box flex={1}>
 						{/* <Icon as={icon} color='primary.light' _dark={{color:'primary:dark'}} fontSize="3xl" /> */}

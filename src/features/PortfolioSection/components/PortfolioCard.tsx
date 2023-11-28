@@ -1,11 +1,10 @@
-import { AspectRatio, Text, useColorMode, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
+import { AspectRatio, Text, useColorMode, VStack } from '@chakra-ui/react'
 
 import { MotionBox } from '@/components/MotionBox/MotionBox'
 import { Technologies } from '@/components/Technologies/Technologies'
-
-import { CardHeader } from './CardHeader'
 import { PortfolioType } from '../types/PortfolioType'
+import { CardHeader } from './CardHeader'
 
 type PortfolioCardProps = {
 	portfolio: PortfolioType

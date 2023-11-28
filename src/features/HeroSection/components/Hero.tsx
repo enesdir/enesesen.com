@@ -1,9 +1,8 @@
-import { Box, Flex, Heading, keyframes, useColorModeValue } from '@chakra-ui/react'
 import Image from 'next/image'
+import { Box, Flex, Heading, keyframes, useColorModeValue } from '@chakra-ui/react'
 
 import { MotionBox } from '@/components/MotionBox/MotionBox'
-
-import futuristicImage from '~/images/futuristic.svg'
+import futuristicImage from '~/public/images/futuristic.svg'
 
 export const Hero = () => {
 	const color = useColorModeValue('primary.light', 'primary.dark')

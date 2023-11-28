@@ -2,16 +2,7 @@
 	{
 		"title": "Blog Application",
 		"description": "Serverless Blog Application written with NextJS",
-		"technologies": [
-			"TypeScript",
-			"Prisma",
-			"Nexus",
-			"GraphQL",
-			"Apollo",
-			"PostgreSQL",
-			"NextJS",
-			"MaterialUI"
-		],
+		"technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL", "Apollo", "PostgreSQL", "NextJS", "MaterialUI"],
 		"url": "https://github.com/enesdir/cn-blog",
 		"demoUrl": "https://cn-blog-three.vercel.app",
 		"imageUrl": "/portfolio/cn-blog.png"

@@ -1,22 +1,14 @@
+import { SITE_ADDRESS } from './constants'
+
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [
-		{
-			url: 'https://enesesen.com',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://enesesen.com/portfolio',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://enesesen.com/projects',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://enesesen.com/contact',
-			lastModified: new Date(),
-		},
-	]
+	const staticRoutes = ['', '/portfolio', '/blog', '/projects', '/contact'].map((route) => {
+		return {
+			url: `${SITE_ADDRESS}${route}`,
+			lastModified: new Date().toISOString().split('T')[0],
+			priority: route === '' ? 1 : 0.8,
+		}
+	})
+	return [...staticRoutes]
 }

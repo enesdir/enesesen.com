@@ -1,8 +1,8 @@
-import { IconButton } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconButton } from '@chakra-ui/react'
 
-import profilePic from '~/images/enes.jpg'
+import profilePic from '~/public/images/enes.jpg'
 
 export function Avatar(): JSX.Element {
 	return (

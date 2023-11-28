@@ -1,5 +1,5 @@
-import { Box, Button, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
+import { Box, Button, Heading } from '@chakra-ui/react'
 import { FaHome } from 'react-icons/fa'
 
 import { Container } from '@/components/Container'

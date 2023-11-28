@@ -1,12 +1,11 @@
-import type { Metadata, Viewport } from 'next'
 import { Figtree } from 'next/font/google'
-import type { ReactNode } from 'react'
 
 import { ThemeProvider } from '@/contexts/ThemeProvider'
-
 import { Layout } from '@/features/Layout'
-
 import { DEFAULT_SEO } from './constants'
+
+import type { Metadata, Viewport } from 'next'
+import type { ReactNode } from 'react'
 
 export const figTree = Figtree({
 	weight: ['400', '700'],

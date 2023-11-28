@@ -1,13 +1,4 @@
-import {
-	Box,
-	Button,
-	Flex,
-	Input,
-	InputGroup,
-	InputLeftElement,
-	Textarea,
-	useColorModeValue,
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Input, InputGroup, InputLeftElement, Textarea, useColorModeValue } from '@chakra-ui/react'
 import { FaAt, FaUserAlt } from 'react-icons/fa'
 
 import { useContactForm } from '@/features/ContactSection/hooks/useContactForm'
@@ -39,13 +30,7 @@ export function Form() {
 			<Input name='_gotcha' display='none' />
 
 			<Flex flexDir={['column', 'column', 'row']} justify='space-between' align='center' mt='16px'>
-				<Button
-					type='submit'
-					isLoading={isSubmitting}
-					loadingText='Sending...'
-					colorScheme='blue'
-					minW='200px'
-				>
+				<Button type='submit' isLoading={isSubmitting} loadingText='Sending...' colorScheme='blue' minW='200px'>
 					Send Message
 				</Button>
 

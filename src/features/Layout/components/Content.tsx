@@ -1,9 +1,10 @@
 'use client'
 
 import { Box } from '@chakra-ui/react'
-import type { PropsWithChildren } from 'react'
 
 import { Container } from '@/components/Container'
+
+import type { PropsWithChildren } from 'react'
 
 export const Content = ({ children }: PropsWithChildren) => {
 	return (

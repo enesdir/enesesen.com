@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import projectsData from '~/data/projects.json'
+import projectsData from '~/public/data/projects.json'
 
 // eslint-disable-next-line unused-imports/no-unused-vars
 export async function GET(request: Request) {

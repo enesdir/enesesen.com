@@ -1,0 +1,7 @@
+on:
+  workflow_dispatch:
+
+name: Release
+jobs:
+  release:
+    uses: enesdir/workflows/.github/workflows/release.yml@main

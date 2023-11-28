@@ -1,7 +1,8 @@
 'use client'
 
-import type { ProjectType } from '@/features/ProjectSection/'
 import { ProjectStack } from '@/features/ProjectSection/'
+
+import type { ProjectType } from '@/features/ProjectSection/'
 
 type ProjectsPageProps = {
 	projects: ProjectType[]

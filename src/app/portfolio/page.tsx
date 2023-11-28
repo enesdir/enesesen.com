@@ -1,9 +1,8 @@
-import type { Metadata } from 'next'
-
 import { PortfolioPage } from '@/features/LandingPages'
-import type { PortfolioType } from '@/features/PortfolioSection'
-
 import { getBaseUrl } from '@/utils/getBaseUrl'
+
+import type { PortfolioType } from '@/features/PortfolioSection'
+import type { Metadata } from 'next'
 
 async function getData() {
 	const res = await fetch(`${getBaseUrl()}/api/portfolio`)

@@ -1,7 +1,7 @@
 import { SimpleGrid } from '@chakra-ui/react'
 
-import { IntroTile } from './IntroTile'
 import introTiles from '../constants/introTiles'
+import { IntroTile } from './IntroTile'
 
 export const IntroStack = () => {
 	return (

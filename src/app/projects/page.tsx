@@ -1,9 +1,9 @@
+import { ProjectsPage } from '@/features/LandingPages'
+import { getBaseUrl } from '@/utils/getBaseUrl'
+
+import type { ProjectType } from '@/features/ProjectSection'
 import type { Metadata } from 'next'
 
-import { ProjectsPage } from '@/features/LandingPages'
-import type { ProjectType } from '@/features/ProjectSection'
-
-import { getBaseUrl } from '@/utils/getBaseUrl'
 async function getData() {
 	const res = await fetch(`${getBaseUrl()}/api/projects`)
 	// The return value is *not* serialized

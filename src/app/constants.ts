@@ -8,3 +8,4 @@ export const DEFAULT_SEO = {
 		},
 	],
 }
+export const SITE_ADDRESS = 'https://enesesen.com'

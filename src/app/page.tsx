@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-
 import { WebsiteRoot } from '@/features/LandingPages'
+
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
 	title: 'Enes ESEN',

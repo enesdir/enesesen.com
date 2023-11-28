@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-useless-fragment */
+import { useEffect, useState } from 'react'
 import { Container, Flex, Spinner } from '@chakra-ui/react'
-import { type PropsWithChildren, useEffect, useState } from 'react'
+
+import type { PropsWithChildren } from 'react'
 
 type PageContentProps = PropsWithChildren & {
 	isLoading: boolean
