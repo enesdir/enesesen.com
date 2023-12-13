@@ -1,11 +1,11 @@
+import { env } from '@/env.mjs'
 import { ProjectsPage } from '@/features/LandingPages'
-import { getBaseUrl } from '@/utils/getBaseUrl'
 
 import type { ProjectType } from '@/features/ProjectSection'
 import type { Metadata } from 'next'
 
 async function getData() {
-	const res = await fetch(`${getBaseUrl()}/api/projects`)
+	const res = await fetch(`${env.NEXT_PUBLIC_BASE_URL}/api/projects`)
 	// The return value is *not* serialized
 	// You can return Date, Map, Set, etc.
 

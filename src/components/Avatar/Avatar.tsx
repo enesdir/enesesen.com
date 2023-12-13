@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IconButton } from '@chakra-ui/react'
 
-import profilePic from '~/public/images/enes.jpg'
+import { appConfig } from '@/constants/appConfig'
 
 export function Avatar(): JSX.Element {
 	return (
@@ -17,7 +17,18 @@ export function Avatar(): JSX.Element {
 				aria-label='Homepage navigation button'
 				_hover={{ backgroundColor: 'transparent' }}
 			>
-				<Image priority alt='Enes ESEN profile image' src={profilePic} style={{ borderRadius: '50%' }} />
+				<Image
+					alt={`${appConfig.avatar.name}' profile image'`}
+					src={appConfig.avatar.image}
+					quality={100}
+					loading='lazy'
+					fill
+					sizes='100vw'
+					style={{
+						objectFit: 'cover',
+						borderRadius: '50%',
+					}}
+				/>
 			</IconButton>
 		</Link>
 	)

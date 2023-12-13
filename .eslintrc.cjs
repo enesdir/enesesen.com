@@ -5,7 +5,18 @@
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
+	root: true,
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		project: true,
+		ecmaVersion: 'latest', // Allows for the parsing of modern ECMAScript features
+		sourceType: 'module', // Allows for the use of imports
+	},
 	extends: ['next/core-web-vitals', 'prettier', 'plugin:@typescript-eslint/recommended'],
 	plugins: ['@typescript-eslint/eslint-plugin', 'unused-imports'],
 	rules: {

@@ -4,7 +4,7 @@
 		"build": {
 			"dependsOn": ["type-check"],
 			"outputs": [".next/**", "!.next/cache/**", "public/**"],
-			"env": ["NEXT_PUBLIC_FORMSPREE_URL", "NEXT_PUBLIC_CALENDLY_URL", "NEXT_PUBLIC_VERCEL_URL"]
+			"env": ["NEXT_PUBLIC_FORMSPREE_URL", "NEXT_PUBLIC_CALENDLY_URL", "NEXT_PUBLIC_BASE_URL", "VERCEL_ENV"]
 		},
 		"lint": {
 			"outputs": [],

@@ -1,4 +1,7 @@
 {
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"regions": ["fra1"],
+	"framework": "nextjs",
 	"github": {
 		"silent": true
 	}

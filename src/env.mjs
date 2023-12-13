@@ -6,10 +6,7 @@ import { z } from 'zod'
  * env vars.
  */
 const server = z.object({
-	NODE_ENV: z.enum(['development', 'test', 'production']),
-	NEXT_PUBLIC_FORMSPREE_URL: z.string().url(),
-	NEXT_PUBLIC_CALENDLY_URL: z.string().url(),
-	NEXT_PUBLIC_VERCEL_URL: z.string(),
+	VERCEL_ENV: z.enum(['development', 'test', 'production']),
 })
 
 /**
@@ -19,6 +16,7 @@ const server = z.object({
 const client = z.object({
 	NEXT_PUBLIC_FORMSPREE_URL: z.string().url(),
 	NEXT_PUBLIC_CALENDLY_URL: z.string().url(),
+	NEXT_PUBLIC_BASE_URL: z.string().url(),
 })
 
 /**
@@ -28,10 +26,10 @@ const client = z.object({
  * @type {Record<keyof z.infer<typeof server> | keyof z.infer<typeof client>, string | undefined>}
  */
 const processEnv = {
-	NODE_ENV: process.env.NODE_ENV,
+	VERCEL_ENV: process.env.VERCEL_ENV,
 	NEXT_PUBLIC_FORMSPREE_URL: process.env.NEXT_PUBLIC_FORMSPREE_URL,
 	NEXT_PUBLIC_CALENDLY_URL: process.env.NEXT_PUBLIC_CALENDLY_URL,
-	NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+	NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
 }
 
 // Don't touch the part below
@@ -43,7 +41,7 @@ const merged = server.merge(client)
 /** @typedef {z.infer<typeof merged>} MergedOutput */
 /** @typedef {z.SafeParseReturnType<MergedInput, MergedOutput>} MergedSafeParseReturn */
 
-let env = /** @type {MergedOutput} */ (process.env)
+let env = /** @type {MergedOutput} */ (/** @type {any} */ (process.env))
 
 if (!!process.env.SKIP_ENV_VALIDATION == false) {
 	const isServer = typeof window === 'undefined'
@@ -66,7 +64,7 @@ if (!!process.env.SKIP_ENV_VALIDATION == false) {
 			// Otherwise it would just be returning `undefined` and be annoying to debug
 			if (!isServer && !prop.startsWith('NEXT_PUBLIC_'))
 				throw new Error(
-					process.env.NODE_ENV === 'production'
+					process.env.VERCEL_ENV === 'production'
 						? '❌ Attempted to access a server-side environment variable on the client'
 						: `❌ Attempted to access server-side environment variable '${prop}' on the client`
 				)

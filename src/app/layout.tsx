@@ -1,13 +1,13 @@
 import { Figtree } from 'next/font/google'
 
+import { siteConfig } from '@/constants/siteConfig'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 import { Layout } from '@/features/Layout'
-import { DEFAULT_SEO } from './constants'
 
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
-export const figTree = Figtree({
+const figTree = Figtree({
 	weight: ['400', '700'],
 	subsets: ['latin'],
 	variable: '--font-figtree',
@@ -27,47 +27,50 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
 	title: {
-		template: `%s | ${DEFAULT_SEO.title}`,
-		default: DEFAULT_SEO.title,
+		template: `%s | ${siteConfig.seoTitle}`,
+		default: siteConfig.seoTitle,
 	},
-	description: DEFAULT_SEO.description,
+	description: siteConfig.seoDescription,
+	robots: {
+		follow: true,
+		index: true,
+	},
 	openGraph: {
 		type: 'website',
-		locale: 'en_IE',
-		url: 'https://enesesen.com',
-		siteName: 'Enes Esen',
-		images: DEFAULT_SEO.images,
+		locale: 'en_US',
+		url: siteConfig.siteUrl,
+		title: siteConfig.seoTitle,
+		description: siteConfig.seoDescription,
+		siteName: siteConfig.seoTitle,
+		images: siteConfig.og.images,
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: DEFAULT_SEO.title,
-		description: DEFAULT_SEO.description,
-		creator: '@codenuru',
-		images: DEFAULT_SEO.images,
+		title: siteConfig.seoTitle,
+		description: siteConfig.seoDescription,
+		creator: siteConfig.og.twitterCreator,
+		images: siteConfig.og.images,
+		site: siteConfig.siteUrl,
 	},
 	icons: {
-		icon: {
-			url: '/favicon/favicon-32x32.png',
-			sizes: '32x32',
-		},
-		apple: '/favicon/apple-icon.png',
-		shortcut: '/favicon/favicon.ico',
+		icon: { url: `${siteConfig.siteUrl}/favicon/favicon-16x16.png`, type: 'image/png', sizes: '16x16' },
+		apple: { url: `${siteConfig.siteUrl}/favicon/apple-icon.png`, type: 'image/png', sizes: '180x180' },
+		shortcut: { url: `${siteConfig.siteUrl}/favicon/favicon.ico`, type: 'image/x-icon', sizes: '48x48' },
 		other: [
 			{
-				rel: 'icon',
-				url: '/favicon/favicon-16x16.png',
-				sizes: '16x16',
+				url: `${siteConfig.siteUrl}/favicon/favicon-32x32.png`,
+				type: 'image/png',
+				sizes: '32x32',
 			},
 		],
 	},
-	manifest: '/favicon/site.webmanifest',
-	metadataBase: new URL('https://enesesen.com'),
+	metadataBase: new URL(siteConfig.siteUrl),
 }
 export default async function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='en' dir='ltr'>
 			<head />
-			<body>
+			<body className={figTree.variable}>
 				<ThemeProvider>
 					<Layout>{children}</Layout>
 				</ThemeProvider>

@@ -1,7 +1,32 @@
 [
+  {
+		"title": "XMDB",
+		"description": "Fetch External API Show data using React and Material-UI",
+		"technologies": ["TypeScript", "tRPC", "Prisma", "PostgreSQL", "React", "NextJS", "TailwindCSS"],
+		"url": "https://github.com/enesdir/xmdb",
+		"demoUrl": "https://xmdb.enesesen.com",
+		"imageUrl": ""
+	},
+  {
+		"title": "E-Commerce Application",
+		"description": "Landing Page/Store Page",
+		"technologies": ["TypeScript", "NextJS", "MaterialUI"],
+		"url": "https://github.com/enesdir/react-store",
+		"demoUrl": "https://react-store.enesesen.com",
+		"imageUrl": "https://i.ibb.co/Cbknqtj/react-storelossly.gif"
+	},
+  {
+		"title": "E-Commerce Application",
+		"description": "Landing Page/Store Page, Auth with Firebase",
+		"technologies": ["TypeScript", "Angular", "TailwindCSS"],
+		"url": "https://github.com/enesdir/angular-store",
+		"demoUrl": "https://angular-store.enesesen.com",
+		"imageUrl": ""
+	},
 	{
 		"title": "Blog Application",
 		"description": "Serverless Blog Application written with NextJS",
+		"detail": "The IMDb Clone app, developed with Prisma, tRPC, and Next.js, is a feature-rich platform, offering an immersive user experience and robust functionalities. With a strong emphasis on user engagement and seamless navigation, this application provides a range of essential and cutting-edge features.Users can access fully functional Sign In, Sign Up, and Forgot Password screens, ensuring a secure and hassle-free authentication process. The comprehensive account profile screens enable personalized user management, complemented by a seamless capability to create and list movies. Through the search functionality, users can effortlessly discover and explore movies created by others, facilitating a vibrant and dynamic community experience. Social features such as the ability to follow other users and like posts enrich the user interaction, while detailed statistics for user follows and post likes offer valuable insights. The visually appealing landing layout and interactive carousel image slider enhance the overall visual appeal and user engagement. Furthermore, the application's responsive design and navigation ensure a consistent experience across devices. Developers benefit from a collection of tools and configurations, including the integration of Storybook for UI component development, linting tools for code consistency, and Vercel deployment configurations for seamless deployment. With an intuitive routing system that mirrors the patterns of IMDb.com, this app delivers a familiar and user-friendly browsing experience. Altogether, this IMDb Clone app represents a sophisticated blend of advanced features and user-centric design, providing a compelling entertainment platform that is as enjoyable for developers as it is for users.",
 		"technologies": ["TypeScript", "Prisma", "Nexus", "GraphQL", "Apollo", "PostgreSQL", "NextJS", "MaterialUI"],
 		"url": "https://github.com/enesdir/cn-blog",
 		"demoUrl": "https://cn-blog-three.vercel.app",

@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 
 import { SectionTitle } from '@/components/SectionTitle'
 import { Projects } from './Projects'
@@ -33,6 +33,9 @@ export const ProjectStack = ({ projects }: ProjectStackProps) => {
 	// }
 	return (
 		<Box>
+			<Heading size='lg' fontWeight='normal'>
+				Personal Projects
+			</Heading>
 			<SectionTitle title='Ongoing Projects' />
 			<Projects projects={inProgressProjects} />
 			<SectionTitle title='Successfully Completed Projects' />

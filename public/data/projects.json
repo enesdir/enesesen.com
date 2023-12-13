@@ -13,44 +13,6 @@
 		"imageUrl": ""
 	},
 	{
-		"title": "Booking System",
-		"shortDescription": "Booking System",
-		"description": "Solution for planning and scheduling resources for small business customers. Integration of the Swiss and Stripe payment methods.",
-		"slug": "booking-system",
-		"position": "Front-End Engineer",
-		"technologies": ["TypeScript", "TailwindCSS", "REST", "Axios", "NextJS", "Swiss", "Stripe"],
-		"projectDate": "2022",
-		"projectDuration": "9 Months",
-		"projectStatus": "Completed",
-		"url": "",
-		"imageUrl": ""
-	},
-	{
-		"title": "NFT Gaming Platform",
-		"shortDescription": "NFT Gaming Platform",
-		"description": "Designing a great user experience, smooth, and responsive interface for the game, which has a detailed interface/API.",
-		"position": "Front-End Developer",
-		"technologies": ["TypeScript", "Web3", "TailwindCSS", "NextJS"],
-		"projectDate": "2021",
-		"projectDuration": "9 Months",
-		"projectStatus": "Completed",
-		"url": "",
-		"imageUrl": ""
-	},
-	{
-		"title": "UI-Kit Library",
-		"shortDescription": "UI-Kit Library",
-		"description": "Collection of components, that you can readily use or modify to meet their needs for client. ",
-		"slug": "ui-kit-library",
-		"position": "Front-End Engineer",
-		"technologies": ["TypeScript", "React", "StoryBook", "CSS3"],
-		"projectDate": "2021",
-		"projectDuration": "5 Months",
-		"projectStatus": "Completed",
-		"url": "",
-		"imageUrl": ""
-	},
-	{
 		"title": "Various Web Applications",
 		"shortDescription": "Example Landing Page/Store Page Auth with Firebase",
 		"description": "Create, secure, and maintain a unix-like OS. Deploy applications such as WordPress, Drupal, and Magento. Managing these programs' security flaws, SEO enhancements, dependability, and maintainability.",
